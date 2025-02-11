@@ -4,17 +4,20 @@ import React from "react";
 
 interface SideBarListProps {
   list: listItem[];
+  pathname: string;
 }
-const SideBarList = ({ list }: SideBarListProps) => {
+const SideBarList = ({ list, pathname }: SideBarListProps) => {
   return (
     <div className="flex flex-col gap-1 ">
       {list.map((listItem) => (
         <Link
           key={listItem.name}
           href={listItem.url}
-          className="hover:bg-lightSecondaryBg dark:hover:bg-darkSecondaryBg py-2 px-3"
+          className={`${
+            pathname === listItem.url ? "text-primary" : ""
+          } hover:bg-lightSecondaryBg dark:hover:bg-darkSecondaryBg py-2 px-4`}
         >
-          <p>{listItem.name}</p>{" "}
+          <p className="font-semibold">{listItem.name}</p>{" "}
         </Link>
       ))}
     </div>
