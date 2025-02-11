@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,8 +10,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        lightBg: "var(--light-background)",
+        darkBg: "var(--dark-background)",
+
+        lightSecondaryBg: "var(--light-secondary-background)",
+        darkSecondaryBg: "var(--dark-secondary-background)",
+
+        lightTextContrast: "var(--light-text-contrast)",
+        darkTextContrast: "var(--dark-text-contrast)",
+        grayText: "var(--gray-text)",
+      },
+      boxShadow: {
+        card: `0px 4px 12px -3px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.02);`,
       },
     },
   },
