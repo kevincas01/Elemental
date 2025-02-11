@@ -14,8 +14,8 @@ import EditNoteOutlinedIcon from "@mui/icons-material/EditNoteOutlined";
 import HourglassTopOutlinedIcon from "@mui/icons-material/HourglassTopOutlined";
 import RectangleIcon from "@mui/icons-material/Rectangle";
 import MenuIcon from "@mui/icons-material/Menu";
-import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
-import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
+import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
+import AutoAwesomeMotionOutlinedIcon from "@mui/icons-material/AutoAwesomeMotionOutlined";
 import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
 
 export interface listItem {
@@ -23,11 +23,24 @@ export interface listItem {
   url: string;
   icon?: ReactNode;
 }
+
 export const sectionsList: listItem[] = [
   { name: "FAQ", url: "/components/faq", icon: <HelpOutlineOutlinedIcon /> },
-  { name: "Forms", url: "/components/forms", icon: <InsertDriveFileOutlinedIcon /> },
-  { name: "Heros", url: "/components/heros", icon: <InsertPhotoOutlinedIcon /> },
-  { name: "Pricing", url: "/components/pricing", icon: <AttachMoneyOutlinedIcon /> },
+  {
+    name: "Forms",
+    url: "/components/forms",
+    icon: <InsertDriveFileOutlinedIcon />,
+  },
+  {
+    name: "Heros",
+    url: "/components/heros",
+    icon: <InsertPhotoOutlinedIcon />,
+  },
+  {
+    name: "Pricing",
+    url: "/components/pricing",
+    icon: <AttachMoneyOutlinedIcon />,
+  },
   { name: "Sign in", url: "/components/sign-in", icon: <LoginOutlinedIcon /> },
 ];
 export const componentsList: listItem[] = [
@@ -86,10 +99,74 @@ export const componentsList: listItem[] = [
     url: "/components/other",
     icon: <WorkspacesOutlinedIcon />,
   },
-  { name: "Tabs", url: "/components/tabs", icon: <AutoAwesomeMotionOutlinedIcon /> },
+  {
+    name: "Tabs",
+    url: "/components/tabs",
+    icon: <AutoAwesomeMotionOutlinedIcon />,
+  },
   {
     name: "Toggle",
     url: "/components/toggle",
     icon: <ToggleOffOutlinedIcon />,
   },
 ];
+
+export const componentMappings: Record<
+  string,
+  { name: string; icon: React.ReactNode; element: React.ReactNode }
+> = {
+  faq: { name: "FAQ", icon: <HelpOutlineOutlinedIcon />, element: null },
+  forms: {
+    name: "Forms",
+    icon: <InsertDriveFileOutlinedIcon />,
+    element: null,
+  },
+  heros: { name: "Heros", icon: <InsertPhotoOutlinedIcon />, element: null },
+  pricing: {
+    name: "Pricing",
+    icon: <AttachMoneyOutlinedIcon />,
+    element: null,
+  },
+  "sign-in": { name: "Sign in", icon: <LoginOutlinedIcon />, element: null },
+  accordions: {
+    name: "Accordions",
+    icon: <KeyboardDoubleArrowDownOutlinedIcon />,
+    element: null,
+  },
+  buttons: { name: "Buttons", icon: <AdsClickOutlinedIcon />, element: null },
+  cards: { name: "Cards", icon: <RectangleOutlinedIcon />, element: null },
+  carousels: {
+    name: "Carousels",
+    icon: <ViewCarouselOutlinedIcon />,
+    element: null,
+  },
+  "dropdown-menus": {
+    name: "Dropdown Menus",
+    icon: <ArrowDropDownCircleOutlinedIcon />,
+    element: null,
+  },
+  grids: {
+    name: "Grids",
+    icon: <AutoAwesomeMosaicOutlinedIcon />,
+    element: null,
+  },
+  inputs: { name: "Inputs", icon: <EditNoteOutlinedIcon />, element: null },
+  loaders: {
+    name: "Loaders",
+    icon: <HourglassTopOutlinedIcon />,
+    element: null,
+  },
+  modals: { name: "Modals", icon: <RectangleIcon />, element: null },
+  "navbars-menus": {
+    name: "Navbars & Menus",
+    icon: <MenuIcon />,
+    element: null,
+  },
+  other: { name: "Other", icon: <WorkspacesOutlinedIcon />, element: null },
+  tabs: {
+    name: "Tabs",
+    icon: <AutoAwesomeMotionOutlinedIcon />,
+    element: null,
+  },
+  toggle: { name: "Toggle", icon: <ToggleOffOutlinedIcon />, element: null },
+};
