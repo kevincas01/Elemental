@@ -3,7 +3,7 @@ import { componentsList, sectionsList } from "../constants/componentsList";
 import ComponentGallery from "../ReusableComponents/ComponentGallery";
 const page = () => {
   return (
-    <div className="">
+    <div className="space-y-4">
       <h1 className="text-5xl">All Components</h1>
       <p>
         All components are built with React, Tailwind CSS, and vanilla
@@ -14,11 +14,9 @@ const page = () => {
         customizable, keeping up with the latest versions of React and Tailwind.
       </p>
       <h2 className="text-2xl">Sections</h2>
-      <ComponentGallery list={sectionsList}/>
-      <h2 className="text-2xl">
-        Components
-      </h2>
-      <ComponentGallery list={componentsList}/>
+      <ComponentGallery list={sectionsList} />
+      <h2 className="text-2xl">Components</h2>
+      <ComponentGallery list={componentsList} />
     </div>
   );
 };
