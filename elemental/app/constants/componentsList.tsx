@@ -24,72 +24,72 @@ export interface listItem {
   icon?: ReactNode;
 }
 export const sectionsList: listItem[] = [
-  { name: "FAQ", url: "/faq", icon: <HelpOutlineOutlinedIcon /> },
-  { name: "Forms", url: "/forms", icon: <InsertDriveFileOutlinedIcon /> },
-  { name: "Heros", url: "/heros", icon: <InsertPhotoOutlinedIcon /> },
-  { name: "Pricing", url: "/pricing", icon: <AttachMoneyOutlinedIcon /> },
-  { name: "Sign in", url: "/sign-in", icon: <LoginOutlinedIcon /> },
+  { name: "FAQ", url: "/components/faq", icon: <HelpOutlineOutlinedIcon /> },
+  { name: "Forms", url: "/components/forms", icon: <InsertDriveFileOutlinedIcon /> },
+  { name: "Heros", url: "/components/heros", icon: <InsertPhotoOutlinedIcon /> },
+  { name: "Pricing", url: "/components/pricing", icon: <AttachMoneyOutlinedIcon /> },
+  { name: "Sign in", url: "/components/sign-in", icon: <LoginOutlinedIcon /> },
 ];
 export const componentsList: listItem[] = [
   {
     name: "Accordions",
-    url: "/accordions",
+    url: "/components/accordions",
     icon: <KeyboardDoubleArrowDownOutlinedIcon />,
   },
   {
     name: "Buttons",
-    url: "/buttons",
+    url: "/components/buttons",
     icon: <AdsClickOutlinedIcon />,
   },
   {
     name: "Cards",
-    url: "/cards",
+    url: "/components/cards",
     icon: <RectangleOutlinedIcon />,
   },
   {
     name: "Carousels",
-    url: "/carousels",
+    url: "/components/carousels",
     icon: <ViewCarouselOutlinedIcon />,
   },
   {
     name: "Dropdown Menus",
-    url: "/dropdown-menus",
+    url: "/components/dropdown-menus",
     icon: <ArrowDropDownCircleOutlinedIcon />,
   },
   {
     name: "Grids",
-    url: "/grids",
+    url: "/components/grids",
     icon: <AutoAwesomeMosaicOutlinedIcon />,
   },
   {
     name: "Inputs",
-    url: "/inputs",
+    url: "/components/inputs",
     icon: <EditNoteOutlinedIcon />,
   },
   {
     name: "Loaders",
-    url: "/loaders",
+    url: "/components/loaders",
     icon: <HourglassTopOutlinedIcon />,
   },
   {
     name: "Modals",
-    url: "/modals",
+    url: "/components/modals",
     icon: <RectangleIcon />,
   },
   {
     name: "Navbars & Menus",
-    url: "/navbars-menus",
+    url: "/components/navbars-menus",
     icon: <MenuIcon />,
   },
   {
     name: "Other",
-    url: "/other",
+    url: "/components/other",
     icon: <WorkspacesOutlinedIcon />,
   },
-  { name: "Tabs", url: "/tabs", icon: <AutoAwesomeMotionOutlinedIcon /> },
+  { name: "Tabs", url: "/components/tabs", icon: <AutoAwesomeMotionOutlinedIcon /> },
   {
     name: "Toggle",
-    url: "/toggle",
+    url: "/components/toggle",
     icon: <ToggleOffOutlinedIcon />,
   },
 ];
