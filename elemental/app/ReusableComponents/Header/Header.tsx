@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 flex justify-between w-full px-10 h-[75px] items-center bg-lightBg dark:bg-darkBg z-50">
+    <header className="fixed top-0 flex justify-between w-full px-10 h-[75px] items-center z-50">
       <Link href={"/"} className="">
         <p className="font-extrabold text-2xl text-primary">Elemental</p>
       </Link>
