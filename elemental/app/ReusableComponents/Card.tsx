@@ -6,7 +6,7 @@ interface CardProps {
 }
 const Card = ({ title, body }: CardProps) => {
   return (
-    <div className="border rounded-lg p-5 hover:shadow-darkCard dark:hover:shadow-lightCard dark:bg-darkBg ">
+    <div className="border rounded-lg p-5 hover:shadow-darkCard dark:hover:shadow-lightCard dark:bg-darkBg dark:border-darkBgBorder">
       <h2 className="text-xl">{title}</h2>
       <p className="text-grayText">{body}</p>
     </div>

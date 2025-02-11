@@ -13,8 +13,10 @@
 
   --light-text-contrast: #000000;
   --dark-text-contrast: #ffffff;
-
   --grayText: #6b7280;
+
+  --dark-border:#374151;
+
 }
 
 h1,

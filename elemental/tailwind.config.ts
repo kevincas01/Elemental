@@ -20,9 +20,11 @@ export default {
         lightTextContrast: "var(--light-text-contrast)",
         darkTextContrast: "var(--dark-text-contrast)",
         grayText: "var(--gray-text)",
+
+        darkBgBorder:"var(--dark-border)"
       },
       boxShadow: {
-        lightCard: `0px 4px 12px -3px rgba(255, 255, 255, 0.3), 0px 2px 6px rgba(255, 255, 255, 0.3);`,
+        lightCard: `0px 4px 12px -3px rgba(255, 255, 255, 0.2), 0px 2px 6px rgba(255, 255, 255, 0.2);`,
         darkCard: `0px 4px 12px -3px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.02);`,
       },
     },

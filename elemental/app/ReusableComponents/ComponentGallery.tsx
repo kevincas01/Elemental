@@ -11,7 +11,7 @@ const ComponentGallery = ({ list }: ComponentGalleryProps) => {
         <Link
           key={listItem.name}
           href={listItem.url}
-          className="relative h-28 w-full flex flex-col text-center justify-center hover:text-primary hover:bg-lightSecondaryBg dark:hover:bg-darkSecondaryBg py-2 px-3 border dark:border-gray-800 overflow-hidden z-20"
+          className="relative h-28 w-full flex flex-col text-center justify-center hover:text-primary hover:bg-lightSecondaryBg dark:hover:bg-darkSecondaryBg py-2 px-3 border dark:border-darkBgBorder overflow-hidden z-20"
         >
           <span className="text-primary right-14 md:left-1/2 md:-translate-x-1/2 opacity-25 absolute -rotate-12 scale-[5] z-0">
             {listItem.icon}
