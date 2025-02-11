@@ -17,9 +17,9 @@ const SideBarList = ({ list, pathname }: SideBarListProps) => {
             pathname === listItem.url
               ? "text-primary bg-darkBg dark:bg-lightBg"
               : "hover:bg-lightSecondaryBg dark:hover:bg-darkSecondaryBg"
-          }  py-2 px-4`}
+          }  py-2 px-4 font-semibold`}
         >
-          <p className="font-semibold">{listItem.name}</p>{" "}
+          {listItem.name}
         </Link>
       ))}
     </div>

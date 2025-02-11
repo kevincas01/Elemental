@@ -17,10 +17,10 @@ export default function Page({ params }: PageProps) {
     <div>
       <div className="flex text-grayText">
         <Link href="/components" className="hover:underline">
-          <p>All Components</p>
+          All Components
         </Link>
         <KeyboardDoubleArrowRightOutlinedIcon />
-        <p>{component.name}</p>
+        <span>{component.name}</span>
       </div>
       <h1>{component.name}</h1>
       <div>{component.element}</div>

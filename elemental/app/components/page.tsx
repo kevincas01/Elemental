@@ -4,7 +4,7 @@ import ComponentGallery from "../ReusableComponents/ComponentGallery";
 const page = () => {
   return (
     <div className="space-y-4">
-      <h1 className="text-5xl">All Components</h1>
+      <h1 className="">All Components</h1>
       <p>
         All components are built with React, Tailwind CSS, and vanilla
         JavaScript or CSS, ensuring a lightweight and simple approach. We focus

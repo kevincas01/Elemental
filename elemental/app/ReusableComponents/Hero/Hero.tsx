@@ -7,7 +7,7 @@ const Hero = () => {
       <h1 className="sm:text-7xl text-5xl">Explore Modern UI Components</h1>
       <p className="text-xl text-grayText">
         Browse through our showcase of UI components, including live demos and
-        code snippets for modern web development{" "}
+        code snippets for modern web development
       </p>
       <div className="flex gap-4 items-center justify-center flex-col sm:flex-row w-full">
         <a
