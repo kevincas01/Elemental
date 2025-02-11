@@ -22,7 +22,8 @@ export default {
         grayText: "var(--gray-text)",
       },
       boxShadow: {
-        card: `0px 4px 12px -3px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.02);`,
+        lightCard: `0px 4px 12px -3px rgba(255, 255, 255, 0.3), 0px 2px 6px rgba(255, 255, 255, 0.3);`,
+        darkCard: `0px 4px 12px -3px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.02);`,
       },
     },
   },
