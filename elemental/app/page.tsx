@@ -1,14 +1,27 @@
-import Image from "next/image";
+import Card from "./ReusableComponents/Card";
+import Hero from "./ReusableComponents/Hero/Hero";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-       <h1>Elemental</h1>
-      
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      </footer>
+    <div className="items-center justify-items-center font-[family-name:var(--font-geist-sans)]">
+      <div className="w-full flex justify-center bg-lightSecondaryBg dark:bg-darkSecondaryBg p-20">
+        <Hero />
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 p-5 gap-5 dark:bg-darkBg">
+        <Card
+          title={"Interactive Examples"}
+          body="Explore fully interactive UI components in action. See how each element behaves and interacts in real-world scenarios."
+        />
+        <Card
+          title={"Code Snippets"}
+          body="Gain access to clean, reusable code examples for every component. Quickly implement them into your own projects."
+        />
+        <Card
+          title={"Component Showcase"}
+          body="Discover a curated collection of essential UI elements, from buttons to cards, designed for seamless integration."
+        />
+      </div>
     </div>
   );
 }
