@@ -1,4 +1,4 @@
-import ToggleThemeSwitch from "@/app/components/ToggleThemeSwitch";
+import ToggleThemeSwitch from "@/app/ReusableComponents/ToggleThemeSwitch";
 import Link from "next/link";
 import React from "react";
 
