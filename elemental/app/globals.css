@@ -1,33 +1,78 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --primary: #f55aa8;
+@custom-variant dark (&:is(.dark *));
 
-  --light-background: #ffffff;
-  --dark-background: #000000;
+@theme {
+  --color-primary: var(--primary);
+  --color-lightBg: var(--light-background);
+  --color-darkBg: var(--dark-background);
+  --color-lightSecondaryBg: var(--light-secondary-background);
+  --color-darkSecondaryBg: var(--dark-secondary-background);
+  --color-lightTextContrast: var(--light-text-contrast);
+  --color-darkTextContrast: var(--dark-text-contrast);
+  --color-grayText: var(--gray-text);
 
-  --light-secondary-background: #e5e7eb;
-  --dark-secondary-background: #262626;
+  --color-darkBgBorder: var(--dark-border);
 
-  --light-text-contrast: #000000;
-  --dark-text-contrast: #ffffff;
-  --gray-text: #6b7280;
+  --shadow-lightCard: 0px 4px 12px -3px rgba(255, 255, 255, 0.2),
+    0px 2px 6px rgba(255, 255, 255, 0.2);
+  --shadow-darkCard: 0px 4px 12px -3px rgba(0, 0, 0, 0.1),
+    0px 2px 6px rgba(0, 0, 0, 0.02);
 
-  --dark-border: #374151;
+  --text-h1: 4rem;
+  --text-h2: 3rem;
+  --text-h3: 2rem;
+  --text-h4: 1.75rem;
+  --text-h5: 1.5rem;
+  --text-h6: 1.25rem;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+@layer utilities {
+  :root {
+    --primary: #f55aa8;
+
+    --light-background: #ffffff;
+    --dark-background: #000000;
+
+    --light-secondary-background: #e5e7eb;
+    --dark-secondary-background: #262626;
+
+    --light-text-contrast: #000000;
+    --dark-text-contrast: #ffffff;
+    --gray-text: #6b7280;
+
+    --dark-border: #374151;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }
 
 @layer components {
