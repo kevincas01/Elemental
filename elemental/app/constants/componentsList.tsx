@@ -16,6 +16,7 @@ import RectangleIcon from "@mui/icons-material/Rectangle";
 import MenuIcon from "@mui/icons-material/Menu";
 import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
 import AutoAwesomeMotionOutlinedIcon from "@mui/icons-material/AutoAwesomeMotionOutlined";
+import TextFieldsIcon from '@mui/icons-material/TextFields';
 import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
 import dynamic from "next/dynamic";
 const TabsComponents = dynamic(() => import("../ReusableComponents/TabsComponents/TabsComponents"));
@@ -107,6 +108,11 @@ export const componentsList: listItem[] = [
     icon: <AutoAwesomeMotionOutlinedIcon />,
   },
   {
+    name: "Text",
+    url: "/components/text",
+    icon: <TextFieldsIcon />,
+  },
+  {
     name: "Toggle",
     url: "/components/toggle",
     icon: <ToggleOffOutlinedIcon />,
@@ -169,6 +175,11 @@ export const componentMappings: Record<
     name: "Tabs",
     icon: <AutoAwesomeMotionOutlinedIcon />,
     element: <TabsComponents/>,
+  },
+  text:{
+    name:"Text",
+    icon:<TextFieldsIcon/>,
+    element:null
   },
   toggle: { name: "Toggle", icon: <ToggleOffOutlinedIcon />, element: null },
 };
