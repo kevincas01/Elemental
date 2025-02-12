@@ -25,6 +25,9 @@
   --text-h4: 1.75rem;
   --text-h5: 1.5rem;
   --text-h6: 1.25rem;
+
+  --animate-cardRotate: card-rotate-clockwise 5000ms infinite linear;
+  --animate-floatUp: floating-up 2600ms infinite linear;
 }
 
 /*
@@ -98,5 +101,29 @@
 
   h6 {
     @apply font-semibold text-h6;
+  }
+}
+
+@keyframes card-rotate-clockwise {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes floating-up {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
