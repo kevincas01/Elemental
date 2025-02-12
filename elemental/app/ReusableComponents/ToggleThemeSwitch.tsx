@@ -29,7 +29,7 @@ const ToggleThemeSwitch = () => {
 
   return (
     <div
-      className={`relative w-14 h-7 flex justify-around items-center mix-blend-difference cursor-pointer`}
+      className={`relative w-14 h-7 flex justify-around items-center cursor-pointer`}
       onClick={toggleTheme}
     >
       <input
@@ -37,10 +37,10 @@ const ToggleThemeSwitch = () => {
         name="darkMode"
         checked={isDarkMode}
         onChange={toggleTheme}
-        className="settings-checkbox absolute w-full h-full appearance-none rounded-full bg-lightBg dark:bg-darkBg border cursor-pointer transition-colors duration-400"
+        className="settings-checkbox absolute w-full h-full appearance-none rounded-full mix-blend-difference bg-lightBg  border cursor-pointer transition-colors duration-400"
       />
       <span
-        className={`absolute  top-0 left-0 h-full aspect-square rounded-full bg-darkBg dark:bg-lightBg transition-transform duration-200 ${
+        className={`absolute  top-0 left-0 h-full aspect-square rounded-full bg-lightBg dark:bg-darkBg transition-transform duration-200 ${
           isDarkMode ? "translate-x-full " : ""
         }`}
       ></span>
@@ -48,7 +48,7 @@ const ToggleThemeSwitch = () => {
         fontSize="inherit"
         sx={{
           zIndex: 20,
-          color: "white",
+          color: "black",
           opacity: isDarkMode ? 0.3 : 1,
         }}
       />
@@ -56,7 +56,7 @@ const ToggleThemeSwitch = () => {
         fontSize="inherit"
         sx={{
           zIndex: 20,
-          color: "black",
+          color: "white",
           opacity: isDarkMode ? 1 : 0.3,
         }}
       />
