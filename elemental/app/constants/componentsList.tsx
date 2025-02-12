@@ -17,6 +17,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
 import AutoAwesomeMotionOutlinedIcon from "@mui/icons-material/AutoAwesomeMotionOutlined";
 import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
+import dynamic from "next/dynamic";
+const TabsComponents = dynamic(() => import("../ReusableComponents/TabsComponents/TabsComponents"));
 
 export interface listItem {
   name: string;
@@ -166,7 +168,7 @@ export const componentMappings: Record<
   tabs: {
     name: "Tabs",
     icon: <AutoAwesomeMotionOutlinedIcon />,
-    element: null,
+    element: <TabsComponents/>,
   },
   toggle: { name: "Toggle", icon: <ToggleOffOutlinedIcon />, element: null },
 };
