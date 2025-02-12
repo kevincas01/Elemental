@@ -15,13 +15,10 @@
   --dark-text-contrast: #ffffff;
   --gray-text: #6b7280;
 
-  --dark-border:#374151;
-
+  --dark-border: #374151;
 }
 
-
 body {
-
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -35,26 +32,26 @@ body {
 
 @layer components {
   h1 {
-      @apply font-semibold text-h1;
+    @apply font-semibold text-h1;
   }
 
   h2 {
-      @apply font-semibold text-h2;
+    @apply font-semibold text-h2;
   }
 
   h3 {
-      @apply font-semibold text-h3;
+    @apply font-semibold text-h3;
   }
 
   h4 {
-      @apply font-semibold text-h4;
+    @apply font-semibold text-h4;
   }
 
   h5 {
-      @apply font-semibold text-h5;
+    @apply font-semibold text-h5;
   }
 
   h6 {
-      @apply font-semibold text-h6;
+    @apply font-semibold text-h6;
   }
 }
