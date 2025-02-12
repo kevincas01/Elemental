@@ -1,24 +1,13 @@
 import ToggleThemeSwitch from "@/app/ReusableComponents/ToggleThemeSwitch";
 import Link from "next/link";
 import React from "react";
+import RevealText from "../TextComponents/RevealText";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 flex justify-between w-full px-10 h-[75px] items-center z-50 bg-lightBg dark:bg-darkBg">
-      <Link
-        href={"/"}
-        className="group font-extrabold text-3xl text-primary relative button uppercase tracking-wider"
-      >
-        <span className="text-transparent dark:[-webkit-text-stroke:1px_var(--dark-text-contrast)] [-webkit-text-stroke:1px_var(--light-text-contrast)]">
-          &nbsp;Elemental&nbsp;
-        </span>
-        <span
-          aria-hidden="true"
-          className={`hover-text [-webkit-text-stroke:1px_var(--primary)] absolute inset-0 box-border text-primary w-0 group-hover:w-full transition-all duration-500 border-r-[6px] border-r-primary overflow-hidden
-             `}
-        >
-          &nbsp;Elemental&nbsp;
-        </span>
+    <header className="fixed top-0 flex justify-between w-full px-5 h-[75px] items-center z-50 bg-lightBg dark:bg-darkBg">
+      <Link href={"/"} className="flex">
+        <RevealText />
       </Link>
 
       <div className="flex gap-5 items-center">
