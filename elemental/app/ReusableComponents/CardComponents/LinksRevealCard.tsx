@@ -19,7 +19,7 @@ const LinksRevealCard = () => {
             <GitHubIcon className="icon" />
           </button>
           <button className="button">
-            <GitHubIcon className="icon" />
+            <InstagramIcon className="icon" />
           </button>
         </div>
       </div>
