@@ -28,8 +28,9 @@
 
   --animate-cardRotate: card-rotate-clockwise 5000ms infinite linear;
   --animate-floatUp: floating-up 2600ms infinite linear;
-  --animate-drip: drip 6000ms infinite cubic-bezier(.26,0,0,1.25);
-  --animate-dripBubbleDown: drip-bubble-down 6000ms infinite cubic-bezier(.26,0,0,1.25);
+  --animate-drip: drip 6000ms infinite cubic-bezier(0.26, 0, 0, 1.25);
+  --animate-dripBubbleDown: drip-bubble-down 6000ms infinite
+    cubic-bezier(0.26, 0, 0, 1.25);
 }
 
 /*
@@ -137,9 +138,9 @@
   20% {
     transform: scaleY(1.4);
   }
- 
+
   100% {
-    transform: scaleY(1); 
+    transform: scaleY(1);
   }
 }
 @keyframes drip-bubble-down {
@@ -147,11 +148,10 @@
     transform: translateY(0px);
     opacity: 1;
   }
-  10%{
+  10% {
     opacity: 1;
-   
   }
-  40%{
+  40% {
     opacity: 0;
     transform: translateY(40px);
   }
