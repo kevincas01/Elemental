@@ -49,7 +49,12 @@
   transform: translateX(-50%);
   height: 100%;
   background: black;
-  clip-path: polygon(0% 0%, 50% 0, 101% 38%, 100% 100%, 0% 100%);
+  background: black;
+  clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+
+  /* If you want the polygons to fully close, change the clip path to the following */
+  /* clip-path: polygon(0% 0%, 50% 0, 101% 38%, 100% 100%, 0% 100%); */
+
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
 }
 
@@ -110,7 +115,7 @@
   cursor: pointer;
   position: absolute;
   transform: translateX(-50%);
-  padding:  5px 5px 10px 5px ;
+  padding: 5px 5px 10px 5px;
   clip-path: polygon(
     0 0,
     100% 0,
