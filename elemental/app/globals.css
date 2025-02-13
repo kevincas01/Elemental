@@ -28,8 +28,8 @@
 
   --animate-cardRotate: card-rotate-clockwise 5000ms infinite linear;
   --animate-floatUp: floating-up 2600ms infinite linear;
-  --animate-drip: drip 10000ms infinite cubic-bezier(.26,0,0,1.25);
-  --animate-dripBubbleDown: drip-bubble-down 10000ms infinite cubic-bezier(.26,0,0,1.25);
+  --animate-drip: drip 6000ms infinite cubic-bezier(.26,0,0,1.25);
+  --animate-dripBubbleDown: drip-bubble-down 6000ms infinite cubic-bezier(.26,0,0,1.25);
 }
 
 /*
@@ -134,12 +134,10 @@
   0% {
     transform: scaleY(1);
   }
-  25% {
+  20% {
     transform: scaleY(1.4);
   }
-  50% {
-    transform: scaleY(1);
-  }
+ 
   100% {
     transform: scaleY(1); 
   }
@@ -153,7 +151,7 @@
     opacity: 1;
    
   }
-  35%{
+  40%{
     opacity: 0;
     transform: translateY(40px);
   }
