@@ -28,6 +28,8 @@
 
   --animate-cardRotate: card-rotate-clockwise 5000ms infinite linear;
   --animate-floatUp: floating-up 2600ms infinite linear;
+  --animate-drip: drip 10000ms infinite cubic-bezier(.26,0,0,1.25);
+  --animate-dripBubbleDown: drip-bubble-down 10000ms infinite cubic-bezier(.26,0,0,1.25);
 }
 
 /*
@@ -125,5 +127,37 @@
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes drip {
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(1.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1); 
+  }
+}
+@keyframes drip-bubble-down {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  10%{
+    opacity: 1;
+   
+  }
+  35%{
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
   }
 }
