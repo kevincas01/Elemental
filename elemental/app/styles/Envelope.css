@@ -19,7 +19,9 @@
   z-index: 20;
 
   background-color: black;
-  clip-path: polygon(0 0, 100% 0, 100% 17%, 50% 50%, 0 17%);
+  clip-path: polygon(50% 50%, 100% 0, 0 0);
+  /* If you want the top polygon to be a pentagon, change the clip path to the following */
+  /* clip-path: polygon(0 0, 100% 0, 100% 17%, 50% 50%, 0 17%); */
 
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s;
 }
