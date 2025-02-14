@@ -1,16 +1,16 @@
+import React from "react";
 import ToggleThemeSwitch from "@/app/ReusableComponents/ToggleThemeSwitch";
 import Link from "next/link";
-import React from "react";
 import RevealText from "../TextComponents/RevealText";
 
 const Header = () => {
   return (
     <header className="fixed top-0 flex justify-between w-full px-5 h-[75px] items-center z-50 bg-lightBg dark:bg-darkBg">
-      <Link href={"/"} className="flex">
+      <Link href={"/"} className="flex flex-col">
         <RevealText />
       </Link>
 
-      <div className="flex gap-5 items-center">
+      <div className="hidden md:flex gap-5 items-center ">
         <Link href={"/components"} className="">
           Components
         </Link>
