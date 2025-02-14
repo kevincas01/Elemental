@@ -1,16 +1,26 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ToggleThemeSwitch from "@/app/ReusableComponents/ToggleThemeSwitch";
 import Link from "next/link";
 import RevealText from "../TextComponents/RevealText";
-
+import MenuIcon from "@mui/icons-material/Menu";
 const Header = () => {
+  const [mobileToggled, setMobileToggled] = useState(false);
   return (
-    <header className="fixed top-0 flex justify-between w-full px-5 h-[75px] items-center z-50 bg-lightBg dark:bg-darkBg">
+    <header
+      className={`fixed top-0 flex justify-between w-full px-5 h-[75px] items-center z-50 bg-lightBg dark:bg-darkBg`}
+    >
       <Link href={"/"} className="flex flex-col">
         <RevealText />
       </Link>
 
-      <div className="hidden md:flex gap-5 items-center ">
+      <div className="block md:hidden" onClick={()=>{
+        setMobileToggled(prev=>!prev)
+      }}>
+        <MenuIcon sx={{ fontSize: "30px" }} />
+      </div>
+      
+      <div className={` md:flex gap-5 items-center ${mobileToggled?"absolute top-[75px]":"hidden"}`}>
         <Link href={"/components"} className="">
           Components
         </Link>
