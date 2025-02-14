@@ -20,7 +20,7 @@ const Header = () => {
         <MenuIcon sx={{ fontSize: "30px" }} />
       </div>
       
-      <div className={` md:flex gap-5 items-center ${mobileToggled?"absolute top-[75px]":"hidden"}`}>
+      <div className={` md:flex gap-2 items-center }`}>
         <Link href={"/components"} className="">
           Components
         </Link>
