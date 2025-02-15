@@ -20,13 +20,13 @@ const Header = () => {
         <MenuIcon sx={{ fontSize: "30px" }} />
       </div>
       
-      <div className={` md:flex gap-2 items-center }`}>
+      <div className={` md:flex gap-2 items-center font-normal text-sm md:text-lg }`}>
         <Link href={"/components"} className="">
           Components
         </Link>
         <Link
           href={"/components"}
-          className="rounded-xl border border-solid border-transparent transition-colors flex items-center justify-center bg-darkBg text-darkTextContrast dark:bg-lightBg  dark:text-lightTextContrast gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+          className="rounded-xl border border-solid border-transparent transition-colors flex items-center justify-center bg-darkBg text-darkTextContrast dark:bg-lightBg dark:text-lightTextContrast gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] h-10 md:h-12 px-4 sm:px-5"
         >
           Get Started
         </Link>
