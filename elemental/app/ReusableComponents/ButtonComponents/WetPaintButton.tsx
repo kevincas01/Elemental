@@ -4,10 +4,10 @@ const WetPaintButton = () => {
   return (
     <div className="relative rounded-md bg-primary px-5 py-2 font-extrabold text-white">
       <span>Wet Paint Button</span>
-      <DrippingPaint animationDelay={3} yOffset={1} leftOffset={20} />
+      <DrippingPaint animationDelay={5} yOffset={1} leftOffset={20} />
       <DrippingPaint animationDelay={2} yOffset={3} leftOffset={40} />
       <DrippingPaint animationDelay={0} yOffset={0} leftOffset={60} />
-      <DrippingPaint animationDelay={5} yOffset={2} leftOffset={80} />
+      <DrippingPaint animationDelay={3} yOffset={2} leftOffset={80} />
     </div>
   );
 };
