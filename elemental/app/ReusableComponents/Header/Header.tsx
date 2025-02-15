@@ -14,19 +14,19 @@ const Header = () => {
         <RevealText />
       </Link>
 
-      <div className="block md:hidden" onClick={()=>{
+      <div className="block sm:hidden" onClick={()=>{
         setMobileToggled(prev=>!prev)
       }}>
         <MenuIcon sx={{ fontSize: "30px" }} />
       </div>
       
-      <div className={` md:flex gap-2 items-center font-normal text-sm md:text-lg }`}>
+      <div className={` sm:flex gap-2 items-center font-normal text-sm sm:text-lg }`}>
         <Link href={"/components"} className="">
           Components
         </Link>
         <Link
           href={"/components"}
-          className="rounded-xl border border-solid border-transparent transition-colors flex items-center justify-center bg-darkBg text-darkTextContrast dark:bg-lightBg dark:text-lightTextContrast gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] h-10 md:h-12 px-4 sm:px-5"
+          className="rounded-xl border border-solid border-transparent transition-colors flex items-center justify-center bg-darkBg text-darkTextContrast dark:bg-lightBg dark:text-lightTextContrast gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] h-10  px-4 sm:px-5"
         >
           Get Started
         </Link>
