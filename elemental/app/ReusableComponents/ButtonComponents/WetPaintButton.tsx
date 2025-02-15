@@ -23,7 +23,11 @@ const DrippingPaint = ({
 }) => {
   return (
     <div
-      className={`absolute box-border left-[${leftOffset}%] origin-top bottom-${yOffset} `}
+      className={`group absolute box-border origin-top`}
+      style={{
+        left: `${leftOffset}%`,
+        bottom: `${yOffset}px`,
+      }}
     >
       <div className={`absolute origin-top top-${yOffset} -left-[10px]`}>
         <svg
@@ -37,11 +41,11 @@ const DrippingPaint = ({
       </div>
       <div
         style={{ animationDelay: `${animationDelay}s` }}
-        className="absolute box-bo.rder w-2 h-5 bg-primary rounded-b-full origin-top animate-drip"
+        className="absolute box-border w-2 h-5 bg-primary rounded-b-full origin-top animate-drip"
       />
       <div
         style={{ animationDelay: `${animationDelay}s` }}
-        className="absolute box-bo.rder w-2 aspect-square bg-primary rounded-full origin-top animate-dripBubbleDown"
+        className="absolute box-border w-2 aspect-square bg-primary rounded-full origin-top animate-dripBubbleDown"
       />
       <div className={`absolute origin-top top-${yOffset} left-[8px]`}>
         <svg
