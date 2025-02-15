@@ -42,7 +42,7 @@ const Header = () => {
       </div>
 
       <div
-        className={`absolute sm:static  ${
+        className={`absolute sm:static h-fit ${
           mobileToggled ? "h-fit p-5" : "h-0"
         } w-full sm:w-fit overflow-hidden sm:p-0 flex sm:flex-row flex-col bg-lightBg dark:bg-darkBg sm:bg-transparent top-[75px] sm:top-0 left-0 sm:flex gap-2 items-center font-normal text-sm sm:text-lg transition-[height] duration-1000`}
       >
