@@ -31,7 +31,7 @@ const Header = () => {
       className={`fixed top-0 flex justify-between w-full px-5 h-[75px] items-center z-50 bg-lightBg dark:bg-darkBg`}
     >
       <Link href={"/"} className="flex flex-col">
-        <RevealText />
+        <RevealText text="Elemental" />
       </Link>
 
       <div
