@@ -5,10 +5,9 @@ import Hero from "./ReusableComponents/Hero/Hero";
 export default function Home() {
   return (
     <div className="items-center justify-items-center font-[family-name:var(--font-geist-sans)]">
-      <div className="w-full flex justify-center bg-lightSecondaryBg dark:bg-darkSecondaryBg p-20">
+      <div className="w-full flex justify-center bg-lightSecondaryBg dark:bg-darkSecondaryBg p-18">
         <Hero />
       </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-3 p-5 gap-5 dark:bg-darkBg">
         <Card
           title={"Interactive Examples"}

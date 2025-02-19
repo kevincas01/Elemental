@@ -1,32 +1,67 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import WetPaintButton from "./ButtonComponents/WetPaintButton";
 
-import BubbleCard from "./CardComponents/BubbleCard";
-import Envelope from "./CardComponents/Envelope";
 import LinksHoverCard from "./CardComponents/LinksHoverCard";
-import LinksRevealCard from "./CardComponents/LinksRevealCard";
 import SlideRevealCard from "./CardComponents/SlideRevealCard";
+import RevealText from "./TextComponents/RevealText";
+import LiftButton from "./ButtonComponents/LiftButton";
+import Envelope from "./CardComponents/Envelope";
+import LinksRevealCard from "./CardComponents/LinksRevealCard";
+import BubbleCard from "./CardComponents/BubbleCard";
+import FlipCard from "./CardComponents/FlipCard";
+import SlidingText from "./TextComponents/SlidingText";
 
 const ComponentsPreviewGallery = () => {
   return (
-    <div className="w-full">
-      <div className="grid-cols-[repeat(10,_274px)] grid grid-flow-col content-stretch auto-cols-auto gap-3.5 justify-center items-stretch mb-3.5 overflow-visible">
+    <div className="w-full overflow-hidden">
+      <div className="grid-cols-[repeat(8,_275px)] grid grid-flow-col content-stretch auto-cols-auto gap-3.5 justify-center mb-3.5 overflow-visible">
         <div></div>
-        <div></div>
-        <div></div>
-        <div className=" bg-lightSecondaryBg dark:bg-darkSecondaryBg  p-10 rounded-lg grid place-content-center">
+        <GalleryComponent>
+          <SlidingText />
+        </GalleryComponent>
+        <GalleryComponent>
           <WetPaintButton />
-        </div>
-        <div className=" bg-lightSecondaryBg dark:bg-darkSecondaryBg  rounded-lg grid place-content-center">
+        </GalleryComponent>
+        <GalleryComponent>
           <LinksHoverCard />
-        </div>
-        <div className=" bg-lightSecondaryBg dark:bg-darkSecondaryBg  p-10 rounded-lg grid place-content-center">
-          <SlideRevealCard />
-        </div>
-        <div className=" bg-lightSecondaryBg dark:bg-darkSecondaryBg  p-10 rounded-lg grid place-content-center">
-          <BubbleCard />
-        </div>
+        </GalleryComponent>
+        <GalleryComponent>
+          <LiftButton />
+        </GalleryComponent>
+        <GalleryComponent>
+          <RevealText text={"Elemental"} />
+        </GalleryComponent>
+        <GalleryComponent>
+          <FlipCard />
+        </GalleryComponent>
+
+        <div></div>
+        <div></div>
       </div>
+      <div className=" pl-[300px] grid-cols-[repeat(10,_275px)] grid grid-flow-col content-stretch auto-cols-auto gap-3.5 justify-center mb-3.5 overflow-visible">
+        <div></div>
+        <div></div>
+        <GalleryComponent>
+          <LinksRevealCard />
+        </GalleryComponent>
+        <GalleryComponent>
+          <BubbleCard />
+        </GalleryComponent>
+        <GalleryComponent>
+          <FlipCard />
+        </GalleryComponent>
+        <GalleryComponent>
+          <SlideRevealCard />
+        </GalleryComponent>
+      </div>
+    </div>
+  );
+};
+
+const GalleryComponent = ({ children }: { children: ReactNode }) => {
+  return (
+    <div className="p-5  bg-lightSecondaryBg dark:bg-darkSecondaryBg  rounded-lg grid place-content-center">
+      {children}
     </div>
   );
 };
