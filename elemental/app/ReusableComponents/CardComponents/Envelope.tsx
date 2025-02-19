@@ -18,23 +18,19 @@ const Envelope = () => {
   };
   return (
     <div
-      className="card"
+      className="envelope-card"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="card-main">
-        <button className="seal">
-          HOVER
-        </button>
-        <div ref={toppRef} className="top"/>
-        <div className="card-content">
-          <p >
-           Elemental
-          </p>
+      <div className="envelope-card-main">
+        <button className="envelope-seal">HOVER</button>
+        <div ref={toppRef} className="envelope-top" />
+        <div className="envelope-card-content">
+          <p>Elemental</p>
         </div>
-        <div className="side left" />
-        <div className="side right" />
-        <div className="bottom" />
+        <div className="envelope-side envelope-left" />
+        <div className="envelope-side envelope-right" />
+        <div className="envelope-bottom" />
       </div>
     </div>
   );

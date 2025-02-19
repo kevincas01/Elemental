@@ -1,10 +1,10 @@
-.card {
+.envelope-card {
   width: 300px;
   aspect-ratio: 16/9;
   position: relative;
 }
 
-.card-main {
+.envelope-card-main {
   width: 100%;
   height: 100%;
   position: relative;
@@ -12,7 +12,7 @@
 }
 
 /* Top, Bottom, Right, & Left Side Polygons General Styling  */
-.top {
+.envelope-top {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -26,7 +26,7 @@
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s;
 }
 
-.bottom {
+.envelope-bottom {
   position: relative;
 
   width: 100%;
@@ -37,7 +37,7 @@
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s;
 }
 
-.side {
+.envelope-side {
   width: 100%;
   height: 100%;
 
@@ -52,23 +52,23 @@
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
 }
 
-.left {
+.envelope-left {
   left: 0;
 }
 
-.right {
+.envelope-right {
   right: 0;
   transform: scale(-1, 1);
 }
 
 /* Card Hover: Top Polygon Position Change */
-.card:hover .top {
+.envelope-card:hover .envelope-top {
   transform: translateY(-100%) scale(1, -1);
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 /* Card Content General Styling & Hover */
-.card-content {
+.envelope-card-content {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -89,13 +89,13 @@
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
 }
 
-.card:hover .card-content {
+.envelope-card:hover .envelope-card-content {
   top: -50%;
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
 }
 
 /* Seal General Styling & Hover */
-.seal {
+.envelope-seal {
   min-width: 40px;
   aspect-ratio: 1/1;
 
@@ -123,7 +123,7 @@
   transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 2s;
 }
 
-.card:hover .seal {
+.envelope-card:hover .envelope-seal {
   right: 35%;
   top: 25%;
   transform: rotate(90deg);

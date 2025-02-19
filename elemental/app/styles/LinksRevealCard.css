@@ -1,10 +1,10 @@
-.card {
+.reveal-card {
   position: relative;
   height: 300px;
   width: 230px;
 }
 
-.main {
+.reveal-main {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -29,7 +29,7 @@
 }
 
 /* Top, Right, & Left Side Polygons General Styling  */
-.top {
+.reveal-top {
   position: absolute;
   top: 0px;
   left: 0;
@@ -42,7 +42,7 @@
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
 }
 
-.side {
+.reveal-side {
   position: absolute;
   width: 100%;
   top: 0;
@@ -58,33 +58,33 @@
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
 }
 
-.left {
+.reveal-left {
   left: 0;
 }
 
-.right {
+.reveal-right {
   right: 0;
   transform: translateX(50%) scale(-1, 1);
 }
 
 /* Card Hover: Polygon Position Change */
-.card:hover .top {
+.reveal-card:hover .reveal-top {
   top: -50px;
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
 }
 
-.card:hover .left {
+.reveal-card:hover .reveal-left {
   left: -50px;
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
 }
 
-.card:hover .right {
+.reveal-card:hover .reveal-right {
   right: -50px;
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
 }
 
 /* Title General Styling & Card Hover Change  */
-.title {
+.reveal-title {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) scale(1.5);
@@ -98,12 +98,12 @@
   transition: all 0.5s ease-out 1.1s;
 }
 
-.card:hover .title {
+.reveal-card:hover .reveal-title {
   transform: scale(1) translateX(-50%);
   transition-delay: 0.2s;
 }
 
-.button-container {
+.reveal-button-container {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -111,7 +111,7 @@
 }
 
 /* Buttons General Styling */
-.button {
+.reveal-button {
   cursor: pointer;
   position: absolute;
   transform: translateX(-50%);
@@ -134,48 +134,48 @@
 }
 
 /* Buttons Icon Style & Hover  */
-.button .icon {
+.reveal-button .reveal-icon {
   width: 20px;
   transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-.button:hover .icon {
+.reveal-button:hover .reveal-icon {
   transform: scale(1.4);
   filter: drop-shadow(0 0 10px white);
 }
 
-.button:active .icon {
+.reveal-button:active .reveal-icon {
   transform: scale(0.7);
 }
 
 /* Buttons Starting Position */
-.button:nth-child(1) {
+.reveal-button:nth-child(1) {
   bottom: 300px;
   transition-delay: 0.4s;
 }
 
-.button:nth-child(2) {
+.reveal-button:nth-child(2) {
   bottom: 300px;
   transition-delay: 0.6s;
 }
 
-.button:nth-child(3) {
+.reveal-button:nth-child(3) {
   bottom: 300px;
   transition-delay: 0.8s;
 }
 
 /* Card Hover: Button Position Change */
-.card:hover .button:nth-child(1) {
+.reveal-card:hover .reveal-button:nth-child(1) {
   bottom: 100px;
   transition-delay: 0.8s;
 }
 
-.card:hover .button:nth-child(2) {
+.reveal-card:hover .reveal-button:nth-child(2) {
   bottom: 50px;
   transition-delay: 0.6s;
 }
 
-.card:hover .button:nth-child(3) {
+.reveal-card:hover .reveal-button:nth-child(3) {
   bottom: 0;
   transition-delay: 0.4s;
 }

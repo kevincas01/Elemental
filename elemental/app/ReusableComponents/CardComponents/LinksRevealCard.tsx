@@ -5,21 +5,21 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import "../../styles/LinksRevealCard.css";
 const LinksRevealCard = () => {
   return (
-    <div className="card">
-      <div className="main">
-        <div className="top"></div>
-        <div className="left side"></div>
-        <div className="right side"></div>
-        <div className="title">Links</div>
-        <div className="button-container">
-          <button className="button">
-            <LinkedInIcon className="icon" />
+    <div className="reveal-card">
+      <div className="reveal-main">
+        <div className="reveal-top"></div>
+        <div className="reveal-left reveal-side"></div>
+        <div className="reveal-right reveal-side"></div>
+        <div className="reveal-title">Links</div>
+        <div className="reveal-button-container">
+          <button className="reveal-button">
+            <LinkedInIcon className="reveal-icon" />
           </button>
-          <button className="button">
-            <GitHubIcon className="icon" />
+          <button className="reveal-button">
+            <GitHubIcon className="reveal-icon" />
           </button>
-          <button className="button">
-            <InstagramIcon className="icon" />
+          <button className="reveal-button">
+            <InstagramIcon className="reveal-icon" />
           </button>
         </div>
       </div>
