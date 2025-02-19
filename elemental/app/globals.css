@@ -59,7 +59,7 @@
     --dark-background: #000000;
 
     --light-secondary-background: #e5e7eb;
-    --dark-secondary-background: #262626;
+    --dark-secondary-background: #111111;
 
     --light-text-contrast: #000000;
     --dark-text-contrast: #ffffff;
@@ -68,6 +68,9 @@
     --dark-border: #374151;
   }
 
+  input {
+    all: unset;
+  }
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
