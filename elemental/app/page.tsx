@@ -1,4 +1,5 @@
 import Card from "./ReusableComponents/Card";
+import ComponentsPreviewGallery from "./ReusableComponents/ComponentsPreviewGallery";
 import Hero from "./ReusableComponents/Hero/Hero";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
           body="Discover a curated collection of essential UI elements, from buttons to cards, designed for seamless integration."
         />
       </div>
+      <ComponentsPreviewGallery />
     </div>
   );
 }
