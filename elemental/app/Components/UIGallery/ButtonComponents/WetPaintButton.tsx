@@ -2,7 +2,7 @@ import React from "react";
 
 const WetPaintButton = () => {
   return (
-    <div className="relative rounded-md bg-primary px-5 py-2 font-extrabold text-white">
+    <div className="relative rounded-md bg-primary px-5 py-2 font-extrabold text-white w-50 text-center">
       <span>Wet Paint Button</span>
       <DrippingPaint animationDelay={5} yOffset={1} leftOffset={20} />
       <DrippingPaint animationDelay={2} yOffset={3} leftOffset={40} />
@@ -26,10 +26,15 @@ const DrippingPaint = ({
       className={`group absolute box-border origin-top`}
       style={{
         left: `${leftOffset}%`,
-        bottom: `${yOffset}px`,
+        bottom: `${yOffset*4}px`,
       }}
     >
-      <div className={`absolute origin-top top-${yOffset} -left-[10px]`}>
+      <div
+        className={`absolute origin-top -left-[10px]`}
+        style={{
+          top: `${yOffset*4}px`,
+        }}
+      >
         <svg
           width="10"
           height="10"
@@ -47,7 +52,12 @@ const DrippingPaint = ({
         style={{ animationDelay: `${animationDelay}s` }}
         className="absolute box-border w-2 aspect-square bg-primary rounded-full origin-top animate-dripBubbleDown"
       />
-      <div className={`absolute origin-top top-${yOffset} left-[8px]`}>
+      <div
+        className={`absolute origin-top left-[8px]`}
+        style={{
+          top: `${yOffset*4}px`,
+        }}
+      >
         <svg
           width="10"
           height="10"
