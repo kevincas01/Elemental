@@ -16,10 +16,15 @@ import RectangleIcon from "@mui/icons-material/Rectangle";
 import MenuIcon from "@mui/icons-material/Menu";
 import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
 import AutoAwesomeMotionOutlinedIcon from "@mui/icons-material/AutoAwesomeMotionOutlined";
-import TextFieldsIcon from '@mui/icons-material/TextFields';
+import TextFieldsIcon from "@mui/icons-material/TextFields";
 import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
 import dynamic from "next/dynamic";
-const TabsComponents = dynamic(() => import("../ReusableComponents/TabsComponents/TabsComponents"));
+const TabsComponents = dynamic(
+  () => import("../Components/UIGallery/TabsComponents/TabsComponents")
+);
+const CardComponents = dynamic(
+  () => import("../Components/UIGallery/CardComponents/CardComponents")
+);
 
 export interface listItem {
   name: string;
@@ -142,7 +147,11 @@ export const componentMappings: Record<
     element: null,
   },
   buttons: { name: "Buttons", icon: <AdsClickOutlinedIcon />, element: null },
-  cards: { name: "Cards", icon: <RectangleOutlinedIcon />, element: null },
+  cards: {
+    name: "Cards",
+    icon: <RectangleOutlinedIcon />,
+    element: <CardComponents />,
+  },
   carousels: {
     name: "Carousels",
     icon: <ViewCarouselOutlinedIcon />,
@@ -174,12 +183,12 @@ export const componentMappings: Record<
   tabs: {
     name: "Tabs",
     icon: <AutoAwesomeMotionOutlinedIcon />,
-    element: <TabsComponents/>,
+    element: <TabsComponents />,
   },
-  text:{
-    name:"Text",
-    icon:<TextFieldsIcon/>,
-    element:null
+  text: {
+    name: "Text",
+    icon: <TextFieldsIcon />,
+    element: null,
   },
   toggle: { name: "Toggle", icon: <ToggleOffOutlinedIcon />, element: null },
 };

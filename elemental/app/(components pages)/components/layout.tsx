@@ -1,6 +1,6 @@
+import SideBar from "@/app/Components/SideBar/SideBar";
 import { Metadata } from "next";
 import React, { ReactNode } from "react";
-import SideBar from "../ReusableComponents/SideBar/SideBar";
 
 export const metadata: Metadata = {
   title: "Components",

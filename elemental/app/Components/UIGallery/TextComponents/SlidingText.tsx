@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/SlidingText.css";
+import "../../../styles/SlidingText.css";
 const SlidingText = () => {
   return (
     <div className="sliding-container">

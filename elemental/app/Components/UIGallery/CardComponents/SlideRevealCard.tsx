@@ -4,9 +4,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const SlideRevealCard = () => {
   return (
     <div className="group relative h-68 aspect-3/4 bg-red-100 rounded-xl overflow-hidden">
-      <div
-        className="bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300 text-3xl font-bold w-full h-full z-10 transition-all duration-400 group-hover:-translate-y-20 flex flex-col justify-center items-center text-center"
-      >
+      <div className="bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300 text-3xl font-bold w-full h-full z-10 transition-all duration-400 group-hover:-translate-y-20 flex flex-col justify-center items-center text-center">
         <p>Hover Me</p>
       </div>
       <ul className="absolute w-full bottom-0  flex justify-around">

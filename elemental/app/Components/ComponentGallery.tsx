@@ -1,5 +1,5 @@
 import React from "react";
-import { listItem } from "../constants/componentsList";
+import { listItem } from "../Constants/componentsList";
 import Link from "next/link";
 interface ComponentGalleryProps {
   list: listItem[];

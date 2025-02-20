@@ -1,6 +1,7 @@
+import ComponentGallery from "@/app/Components/ComponentGallery";
+import { componentsList, sectionsList } from "@/app/Constants/componentsList";
 import React from "react";
-import { componentsList, sectionsList } from "../constants/componentsList";
-import ComponentGallery from "../ReusableComponents/ComponentGallery";
+
 const page = () => {
   return (
     <div className="space-y-4">

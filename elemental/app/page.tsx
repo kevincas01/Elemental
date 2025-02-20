@@ -1,6 +1,6 @@
-import Card from "./ReusableComponents/Card";
-import ComponentsPreviewGallery from "./ReusableComponents/ComponentsPreviewGallery";
-import Hero from "./ReusableComponents/Hero/Hero";
+import Card from "./Components/Card";
+import ComponentsPreviewGallery from "./Components/ComponentsPreviewGallery";
+import Hero from "./Components/Hero/Hero";
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import { listItem } from "@/app/constants/componentsList";
+import { listItem } from "@/app/Constants/componentsList";
 import Link from "next/link";
 import React from "react";
 

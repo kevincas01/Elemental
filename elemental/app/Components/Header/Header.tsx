@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import ToggleThemeSwitch from "@/app/ReusableComponents/ToggleThemeSwitch";
+import ToggleThemeSwitch from "@/app/Components/Header/ToggleThemeSwitch";
 import Link from "next/link";
-import RevealText from "../TextComponents/RevealText";
+import RevealText from "../UIGallery/TextComponents/RevealText";
 import MenuIcon from "@mui/icons-material/Menu";
 const Header = () => {
   const [mobileToggled, setMobileToggled] = useState(false);
@@ -10,8 +10,11 @@ const Header = () => {
 
   // Handle clicks outside of the header
   useEffect(() => {
-    const handleClickOutside = (event:MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
         setMobileToggled(false);
       }
     };

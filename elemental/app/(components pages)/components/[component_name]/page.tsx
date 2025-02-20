@@ -1,4 +1,4 @@
-import { componentMappings } from "@/app/constants/componentsList";
+import { componentMappings } from "@/app/Constants/componentsList";
 import Link from "next/link";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 interface PageProps {
@@ -23,7 +23,7 @@ export default function Page({ params }: PageProps) {
         <span>{component.name}</span>
       </div>
       <h1>{component.name}</h1>
-      <div>{component.element}</div>
+      <div className="flex flex-col gap-10">{component.element}</div>
     </div>
   );
 }

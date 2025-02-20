@@ -18,14 +18,18 @@ const FlipCard = () => {
             <div className="relative w-10 left-5 top-0 aspect-square rounded-full bg-[#ff2233] filter blur-lg animate-floatUp"></div>
           </div>
           <div className="absolute w-full h-full flex flex-col justify-between p-3">
-            <small className="bg-[#00000055] backdrop-blur-sm w-fit px-5 py-1 rounded-full ">Pasta</small>
+            <small className="bg-[#00000055] backdrop-blur-sm w-fit px-5 py-1 rounded-full ">
+              Pasta
+            </small>
             <div className="p-3 border border-gray-600 rounded-md">
               <div className="justify-between">
                 <p className="text-sm">
                   <strong>Spagetti Bolognese</strong>
                 </p>
               </div>
-              <p className="text-xs mt-2 text-[#ffffff88]">30 Mins &nbsp; | &nbsp; 1 Serving</p>
+              <p className="text-xs mt-2 text-[#ffffff88]">
+                30 Mins &nbsp; | &nbsp; 1 Serving
+              </p>
             </div>
           </div>
         </div>

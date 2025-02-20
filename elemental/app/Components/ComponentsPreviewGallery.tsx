@@ -1,15 +1,15 @@
 import React, { ReactNode } from "react";
-import WetPaintButton from "./ButtonComponents/WetPaintButton";
+import WetPaintButton from "./UIGallery/ButtonComponents/WetPaintButton";
 
-import LinksHoverCard from "./CardComponents/LinksHoverCard";
-import SlideRevealCard from "./CardComponents/SlideRevealCard";
-import RevealText from "./TextComponents/RevealText";
-import LiftButton from "./ButtonComponents/LiftButton";
-import Envelope from "./CardComponents/Envelope";
-import LinksRevealCard from "./CardComponents/LinksRevealCard";
-import BubbleCard from "./CardComponents/BubbleCard";
-import FlipCard from "./CardComponents/FlipCard";
-import SlidingText from "./TextComponents/SlidingText";
+import LinksHoverCard from "./UIGallery/CardComponents/LinksHoverCard";
+import SlideRevealCard from "./UIGallery/CardComponents/SlideRevealCard";
+import RevealText from "./UIGallery/TextComponents/RevealText";
+import LiftButton from "./UIGallery/ButtonComponents/LiftButton";
+import Envelope from "./UIGallery/CardComponents/Envelope";
+import LinksRevealCard from "./UIGallery/CardComponents/LinksRevealCard";
+import BubbleCard from "./UIGallery/CardComponents/BubbleCard";
+import FlipCard from "./UIGallery/CardComponents/FlipCard";
+import SlidingText from "./UIGallery/TextComponents/SlidingText";
 
 const ComponentsPreviewGallery = () => {
   return (
