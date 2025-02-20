@@ -19,12 +19,15 @@ import AutoAwesomeMotionOutlinedIcon from "@mui/icons-material/AutoAwesomeMotion
 import TextFieldsIcon from "@mui/icons-material/TextFields";
 import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
 import dynamic from "next/dynamic";
-const TabsComponents = dynamic(
-  () => import("../Components/UIGallery/TabsComponents/TabsComponents")
-);
-const CardComponents = dynamic(
-  () => import("../Components/UIGallery/CardComponents/CardComponents")
-);
+import BubbleCard from "../Components/UIGallery/CardComponents/BubbleCard";
+import FlipCard from "../Components/UIGallery/CardComponents/FlipCard";
+import LinksHoverCard from "../Components/UIGallery/CardComponents/LinksHoverCard";
+import { SlidingTabSelector } from "../Components/UIGallery/TabsComponents/SlidingTabSelector";
+import RevealText from "../Components/UIGallery/TextComponents/RevealText";
+import SlidingText from "../Components/UIGallery/TextComponents/SlidingText";
+import LiftButton from "../Components/UIGallery/ButtonComponents/LiftButton";
+import WetPaintButton from "../Components/UIGallery/ButtonComponents/WetPaintButton";
+
 
 export interface listItem {
   name: string;
@@ -126,69 +129,101 @@ export const componentsList: listItem[] = [
 
 export const componentMappings: Record<
   string,
-  { name: string; icon: React.ReactNode; element: React.ReactNode }
+  {
+    name: string;
+    icon: React.ReactNode;
+    elements: { title: string; component: React.ReactNode }[];
+  }
 > = {
-  faq: { name: "FAQ", icon: <HelpOutlineOutlinedIcon />, element: null },
+  faq: { name: "FAQ", icon: <HelpOutlineOutlinedIcon />, elements: [] },
   forms: {
     name: "Forms",
     icon: <InsertDriveFileOutlinedIcon />,
-    element: null,
+    elements: [],
   },
-  heros: { name: "Heros", icon: <InsertPhotoOutlinedIcon />, element: null },
+  heros: { name: "Heros", icon: <InsertPhotoOutlinedIcon />, elements: [] },
   pricing: {
     name: "Pricing",
     icon: <AttachMoneyOutlinedIcon />,
-    element: null,
+    elements: [],
   },
-  "sign-in": { name: "Sign in", icon: <LoginOutlinedIcon />, element: null },
+  "sign-in": { name: "Sign in", icon: <LoginOutlinedIcon />, elements: [] },
   accordions: {
     name: "Accordions",
     icon: <KeyboardDoubleArrowDownOutlinedIcon />,
-    element: null,
+    elements: [],
   },
-  buttons: { name: "Buttons", icon: <AdsClickOutlinedIcon />, element: null },
+  buttons: {
+    name: "Buttons",
+    icon: <AdsClickOutlinedIcon />,
+    elements: [
+      {
+        title: "Lift Button",
+        component: <LiftButton />,
+      },
+      {
+        title: "Wet Paint Button",
+        component: <WetPaintButton />,
+      },
+    ],
+  },
   cards: {
     name: "Cards",
     icon: <RectangleOutlinedIcon />,
-    element: <CardComponents />,
+    elements: [
+      { title: "Bubble Card", component: <BubbleCard /> },
+      { title: "Flip Card", component: <FlipCard /> },
+      { title: "Links Hover Card", component: <LinksHoverCard /> },
+    ],
   },
   carousels: {
     name: "Carousels",
     icon: <ViewCarouselOutlinedIcon />,
-    element: null,
+    elements: [],
   },
   "dropdown-menus": {
     name: "Dropdown Menus",
     icon: <ArrowDropDownCircleOutlinedIcon />,
-    element: null,
+    elements: [],
   },
   grids: {
     name: "Grids",
     icon: <AutoAwesomeMosaicOutlinedIcon />,
-    element: null,
+    elements: [],
   },
-  inputs: { name: "Inputs", icon: <EditNoteOutlinedIcon />, element: null },
+  inputs: { name: "Inputs", icon: <EditNoteOutlinedIcon />, elements: [] },
   loaders: {
     name: "Loaders",
     icon: <HourglassTopOutlinedIcon />,
-    element: null,
+    elements: [],
   },
-  modals: { name: "Modals", icon: <RectangleIcon />, element: null },
+  modals: { name: "Modals", icon: <RectangleIcon />, elements: [] },
   "navbars-menus": {
     name: "Navbars & Menus",
     icon: <MenuIcon />,
-    element: null,
+    elements: [],
   },
-  other: { name: "Other", icon: <WorkspacesOutlinedIcon />, element: null },
+  other: { name: "Other", icon: <WorkspacesOutlinedIcon />, elements: [] },
   tabs: {
     name: "Tabs",
     icon: <AutoAwesomeMotionOutlinedIcon />,
-    element: <TabsComponents />,
+    elements: [
+      { title: "Sliding Tabs Selector", component: <SlidingTabSelector /> },
+    ],
   },
   text: {
     name: "Text",
     icon: <TextFieldsIcon />,
-    element: null,
+    elements: [
+      {
+        title: "Slide Mask Reveal Text",
+        component: <RevealText text="Elemental" />,
+      },
+      {
+        title: "Sliding Text",
+        component: <SlidingText />,
+      },
+    ],
   },
-  toggle: { name: "Toggle", icon: <ToggleOffOutlinedIcon />, element: null },
+  toggle: { name: "Toggle", icon: <ToggleOffOutlinedIcon />, elements: [] },
 };
