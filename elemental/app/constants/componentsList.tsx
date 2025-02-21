@@ -134,7 +134,7 @@ export const componentMappings: Record<
     elements: {
       title: string;
       component: React.ReactNode;
-      files?: { language: string; title: string; path: string }[];
+      files: { language: string; title: string; path: string }[];
     }[];
   }
 > = {
