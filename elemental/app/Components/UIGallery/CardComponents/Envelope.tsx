@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import "../../styles/Envelope.css";
-
+import "@/app/Styles/UIGallery/Envelope.css"
 const Envelope = () => {
   const toppRef = useRef<HTMLDivElement | null>(null);
 

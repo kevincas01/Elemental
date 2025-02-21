@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../styles/SlidingText.css";
+import "@/app/Styles/UIGallery/SlidingText.css"
 const SlidingText = () => {
   return (
     <div className="sliding-container">
