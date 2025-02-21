@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { foundation } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 interface FileInfo {
   title: string;
@@ -25,7 +25,7 @@ const UIGalleryComponent = ({
   const [selectedFile, setSelectedFile] = useState<FileInfo | null>(
     files && files.length > 0 ? files[0] : null
   );
-  const syntaxTheme = foundation;
+  const syntaxTheme = anOldHope;
 
   const modifiedTheme = {
     ...syntaxTheme,
@@ -81,10 +81,10 @@ const UIGalleryComponent = ({
                     <button
                       key={file.path}
                       onClick={() => setSelectedFile(file)}
-                      className={`cursor-pointer p-3 ${
+                      className={`p-3 ${
                         selectedFile?.path === file.path
                           ? "bg-primary text-lightTextContrast"
-                          : "text-lightTextContrast"
+                          : "text-lightTextContrast cursor-pointer "
                       }`}
                     >
                       {file.title}
