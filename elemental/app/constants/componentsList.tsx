@@ -28,7 +28,6 @@ import SlidingText from "../Components/UIGallery/TextComponents/SlidingText";
 import LiftButton from "../Components/UIGallery/ButtonComponents/LiftButton";
 import WetPaintButton from "../Components/UIGallery/ButtonComponents/WetPaintButton";
 
-
 export interface listItem {
   name: string;
   url: string;
@@ -132,7 +131,11 @@ export const componentMappings: Record<
   {
     name: string;
     icon: React.ReactNode;
-    elements: { title: string; component: React.ReactNode }[];
+    elements: {
+      title: string;
+      component: React.ReactNode;
+      files?: { language: string; title: string; path: string }[];
+    }[];
   }
 > = {
   faq: { name: "FAQ", icon: <HelpOutlineOutlinedIcon />, elements: [] },
@@ -160,10 +163,24 @@ export const componentMappings: Record<
       {
         title: "Lift Button",
         component: <LiftButton />,
+        files: [
+          {
+            language: "javascript",
+            title: "LiftButton.tsx",
+            path: "ButtonComponents/LiftButton.tsx",
+          },
+        ],
       },
       {
         title: "Wet Paint Button",
         component: <WetPaintButton />,
+        files: [
+          {
+            language: "javascript",
+            title: "WetPaintButton.tsx",
+            path: "ButtonComponents/WetPaintButton.tsx",
+          },
+        ],
       },
     ],
   },
@@ -171,9 +188,39 @@ export const componentMappings: Record<
     name: "Cards",
     icon: <RectangleOutlinedIcon />,
     elements: [
-      { title: "Bubble Card", component: <BubbleCard /> },
-      { title: "Flip Card", component: <FlipCard /> },
-      { title: "Links Hover Card", component: <LinksHoverCard /> },
+      {
+        title: "Bubble Card",
+        component: <BubbleCard />,
+        files: [
+          {
+            language: "javascript",
+            title: "BubbleCard.tsx",
+            path: "CardComponents/BubbleCard.tsx",
+          },
+        ],
+      },
+      {
+        title: "Flip Card",
+        component: <FlipCard />,
+        files: [
+          {
+            language: "javascript",
+            title: "FlipCard.tsx",
+            path: "CardComponents/FlipCard.tsx",
+          },
+        ],
+      },
+      {
+        title: "Links Hover Card",
+        component: <LinksHoverCard />,
+        files: [
+          {
+            language: "javascript",
+            title: "LinksHoverCard.tsx",
+            path: "CardComponents/LinksHoverCard.tsx",
+          },
+        ],
+      },
     ],
   },
   carousels: {
@@ -208,7 +255,17 @@ export const componentMappings: Record<
     name: "Tabs",
     icon: <AutoAwesomeMotionOutlinedIcon />,
     elements: [
-      { title: "Sliding Tabs Selector", component: <SlidingTabSelector /> },
+      {
+        title: "Sliding Tabs Selector",
+        component: <SlidingTabSelector />,
+        files: [
+          {
+            language: "javascript",
+            title: "SlidingTabSelector.tsx",
+            path: "TabsComponents/SlidingTabSelector.tsx",
+          },
+        ],
+      },
     ],
   },
   text: {
@@ -218,10 +275,24 @@ export const componentMappings: Record<
       {
         title: "Slide Mask Reveal Text",
         component: <RevealText text="Elemental" />,
+        files: [
+          {
+            language: "javascript",
+            title: "RevealText.tsx",
+            path: "TextComponents/RevealText.tsx",
+          },
+        ],
       },
       {
         title: "Sliding Text",
         component: <SlidingText />,
+        files: [
+          {
+            language: "javascript",
+            title: "SlidingText.tsx",
+            path: "TextComponents/SlidingText.tsx",
+          },
+        ],
       },
     ],
   },
