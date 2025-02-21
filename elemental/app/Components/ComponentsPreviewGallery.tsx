@@ -5,7 +5,6 @@ import LinksHoverCard from "./UIGallery/CardComponents/LinksHoverCard";
 import SlideRevealCard from "./UIGallery/CardComponents/SlideRevealCard";
 import RevealText from "./UIGallery/TextComponents/RevealText";
 import LiftButton from "./UIGallery/ButtonComponents/LiftButton";
-import Envelope from "./UIGallery/CardComponents/Envelope";
 import LinksRevealCard from "./UIGallery/CardComponents/LinksRevealCard";
 import BubbleCard from "./UIGallery/CardComponents/BubbleCard";
 import FlipCard from "./UIGallery/CardComponents/FlipCard";
@@ -13,8 +12,8 @@ import SlidingText from "./UIGallery/TextComponents/SlidingText";
 
 const ComponentsPreviewGallery = () => {
   return (
-    <div className="w-full overflow-hidden">
-      <div className="grid-cols-[repeat(8,_275px)] grid grid-flow-col content-stretch auto-cols-auto gap-3.5 justify-center mb-3.5 overflow-visible">
+    <div className="w-full overflow-hidden flex flex-col items-center justify-center">
+      <div className="grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
         <div></div>
         <GalleryComponent>
           <SlidingText />
@@ -38,7 +37,7 @@ const ComponentsPreviewGallery = () => {
         <div></div>
         <div></div>
       </div>
-      <div className=" pl-[300px] grid-cols-[repeat(10,_275px)] grid grid-flow-col content-stretch auto-cols-auto gap-3.5 justify-center mb-3.5 overflow-visible">
+      <div className="pl-[275px] grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
         <div></div>
         <div></div>
         <GalleryComponent>
@@ -46,9 +45,6 @@ const ComponentsPreviewGallery = () => {
         </GalleryComponent>
         <GalleryComponent>
           <BubbleCard />
-        </GalleryComponent>
-        <GalleryComponent>
-          <FlipCard />
         </GalleryComponent>
         <GalleryComponent>
           <SlideRevealCard />
@@ -60,7 +56,7 @@ const ComponentsPreviewGallery = () => {
 
 const GalleryComponent = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="p-5  bg-lightSecondaryBg dark:bg-darkSecondaryBg  rounded-lg grid place-content-center">
+    <div className="p-5 bg-lightSecondaryBg dark:bg-darkSecondaryBg rounded-lg flex flex-col justify-center items-center ">
       {children}
     </div>
   );
