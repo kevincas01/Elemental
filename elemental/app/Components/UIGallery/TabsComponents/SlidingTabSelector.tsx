@@ -10,7 +10,7 @@ type Position = {
 };
 
 export const SlidingTabSelector = () => (
-  <div className="bg-lightSecondaryBg h-48 w-full flex flex-col justify-center items-center">
+  <div className="h-48 w-full flex flex-col justify-center items-center">
     <SlideTabs />
   </div>
 );
