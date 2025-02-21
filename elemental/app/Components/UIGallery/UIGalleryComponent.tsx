@@ -1,30 +1,29 @@
 "use client";
+import { File, FileGroup } from "@/app/Types/files";
 import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-interface FileInfo {
-  title: string;
-  path: string;
-  language: string; // Added language property
-  content: string; // Preloaded file content
-}
 
 interface UIGalleryComponentProps {
   title: string;
   children: React.ReactNode;
-  files?: FileInfo[];
+  fileGroups?: FileGroup[];
 }
 
 const UIGalleryComponent = ({
   title,
   children,
-  files,
+  fileGroups,
 }: UIGalleryComponentProps) => {
   const [activeTab, setActiveTab] = useState<"view" | "code">("view");
-  const [selectedFile, setSelectedFile] = useState<FileInfo | null>(
-    files && files.length > 0 ? files[0] : null
+  const [selectedGroupIndex, setSelectedGroupIndex] = useState(0);
+  const [selectedFile, setSelectedFile] = useState<File | null>(
+    fileGroups && fileGroups.length > 0 && fileGroups[0].files.length > 0
+      ? fileGroups[0].files[0]
+      : null
   );
+
   const syntaxTheme = anOldHope;
 
   const modifiedTheme = {
@@ -33,7 +32,7 @@ const UIGalleryComponent = ({
       ...syntaxTheme.hljs,
       background: "transparent",
       padding: "0",
-      color:"#6b7280"
+      color: "#6b7280",
     },
   };
 
@@ -42,8 +41,8 @@ const UIGalleryComponent = ({
       <div className="flex justify-between">
         <h2 className="text-2xl font-semibold">{title}</h2>
 
-        {/* Tabs */}
-        <div className="flex ">
+        {/* Tabs for View & Code */}
+        <div className="flex">
           <button
             className={`px-4 py-2 cursor-pointer ${
               activeTab === "view"
@@ -66,6 +65,7 @@ const UIGalleryComponent = ({
           </button>
         </div>
       </div>
+
       {activeTab === "view" ? (
         <div className="bg-lightSecondaryBg dark:bg-darkSecondaryBg h-96 w-full flex flex-col justify-center items-center py-10">
           {children}
@@ -73,40 +73,46 @@ const UIGalleryComponent = ({
       ) : (
         <>
           {/* Code Display */}
-          {selectedFile && (
+          {fileGroups && fileGroups.length > 0 && (
             <div className="max-h-[500px] w-full overflow-auto no-scrollbar bg-lightBg dark:bg-darkSecondaryBg relative border dark:border-darkBgBorder">
-              {files && files.length > 0 && (
-                <div className="flex border-b w-full sticky top-0 bg-lightBg dark:border-b-darkBgBorder dark:bg-darkSecondaryBg">
-                  {files.map((file) => (
-                    <button
-                      key={file.path}
-                      onClick={() => setSelectedFile(file)}
-                      className={`p-3 ${
-                        selectedFile?.path === file.path
-                          ? "bg-primary text-lightTextContrast"
-                          : "text-lightTextContrast cursor-pointer "
-                      }`}
-                    >
-                      {file.title}
-                    </button>
-                  ))}
-                </div>
-              )}
+              <div className="sticky top-0 flex justify-between text-lightTextContrast dark:text-darkTextContrast bg-lightBg dark:border-b-darkBgBorder dark:bg-darkSecondaryBg border-b items-center pr-2">
+                {fileGroups[selectedGroupIndex].files.length > 0 && (
+                  <div className="flex w-full sticky top-0 ">
+                    {fileGroups[selectedGroupIndex].files.map((file) => (
+                      <button
+                        key={file.path}
+                        onClick={() => setSelectedFile(file)}
+                        className={`p-3 ${
+                          selectedFile?.path === file.path
+                            ? "bg-primary"
+                            : "cursor-pointer"
+                        }`}
+                      >
+                        {file.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                {fileGroups[selectedGroupIndex].filegroup}
+              </div>
 
-              <SyntaxHighlighter
-                language={selectedFile.language || "javascript"}
-                showLineNumbers
-                wrapLongLines
-                wrapLines
-                style={modifiedTheme}
-                lineNumberStyle={{
-                  display: "flex",
-                  justifyContent: "start",
-                  paddingLeft: "5px",
-                }}
-              >
-                {selectedFile.content || "// No content available"}
-              </SyntaxHighlighter>
+              {/* Code Display */}
+              {selectedFile && (
+                <SyntaxHighlighter
+                  language={selectedFile.language || "javascript"}
+                  showLineNumbers
+                  wrapLongLines
+                  wrapLines
+                  style={modifiedTheme}
+                  lineNumberStyle={{
+                    display: "flex",
+                    justifyContent: "start",
+                    paddingLeft: "5px",
+                  }}
+                >
+                  {selectedFile.content || "// No content available"}
+                </SyntaxHighlighter>
+              )}
             </div>
           )}
         </>

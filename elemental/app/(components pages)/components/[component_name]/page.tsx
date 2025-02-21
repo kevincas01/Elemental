@@ -18,9 +18,12 @@ export default function Page({ params }: PageProps) {
   // Add file contents to each element
   const elementsWithFiles = component.elements.map((element) => ({
     ...element,
-    files: element.files.map((file) => ({
-      ...file,
-      content: getFileContent(file.path), // Load file content here
+    fileGroups: element.fileGroups.map((group) => ({
+      ...group,
+      files: group.files.map((file) => ({
+        ...file,
+        content: getFileContent(file.path, file.language), 
+      })),
     })),
   }));
 
@@ -35,9 +38,9 @@ export default function Page({ params }: PageProps) {
       </div>
       <h1>{component.name}</h1>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 pb-10">
         {elementsWithFiles.map((element, index) => (
-          <UIGalleryComponent title={element.title} key={index} files={element.files}>
+          <UIGalleryComponent title={element.title} key={index} fileGroups={element.fileGroups}>
             {element.component}
           </UIGalleryComponent>
         ))}
