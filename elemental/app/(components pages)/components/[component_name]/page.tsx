@@ -2,9 +2,10 @@ import { componentMappings } from "@/app/Constants/componentsList";
 import Link from "next/link";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import UIGalleryComponent from "@/app/Components/UIGallery/UIGalleryComponent";
+import { getFileContent } from "@/app/Utils/files";
+
 interface PageProps {
   params: { component_name: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export default function Page({ params }: PageProps) {
@@ -13,6 +14,15 @@ export default function Page({ params }: PageProps) {
   if (!component) {
     return <div>Component not found</div>;
   }
+
+  // Add file contents to each element
+  const elementsWithFiles = component.elements.map((element) => ({
+    ...element,
+    files: element.files.map((file) => ({
+      ...file,
+      content: getFileContent(file.path), // Load file content here
+    })),
+  }));
 
   return (
     <div>
@@ -24,11 +34,11 @@ export default function Page({ params }: PageProps) {
         <span>{component.name}</span>
       </div>
       <h1>{component.name}</h1>
-      
+
       <div className="flex flex-col gap-10">
-        {component.elements.map((Element, index) => (
-          <UIGalleryComponent title={Element.title} key={index}>
-            {Element.component}
+        {elementsWithFiles.map((element, index) => (
+          <UIGalleryComponent title={element.title} key={index} files={element.files}>
+            {element.component}
           </UIGalleryComponent>
         ))}
       </div>
