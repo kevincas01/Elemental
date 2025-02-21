@@ -1,12 +1,17 @@
-import { readFileSync } from "fs";
 import { join } from "path";
+import { readFileSync } from "fs";
 
-export const getFileContent = (filePath: string): string => {
+export const getFileContent = (filePath: string, language: string): string => {
   try {
-    const fullPath = join(process.cwd(), "app/Components/UIGallery/", filePath);
+    // Determine the base path based on language
+    const basePath =
+      language === "css" ? "app/Styles/UIGallery/" : "app/Components/UIGallery/";
+
+    const fullPath = join(process.cwd(), basePath, filePath);
+
     return readFileSync(fullPath, "utf-8");
   } catch (error) {
-    console.error("Error reading file:", error);
-    return "// Error loading file content";
+    console.error(`Error reading file (${filePath}):`, error);
+    return `// Error loading file content: ${filePath}`;
   }
 };
