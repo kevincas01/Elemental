@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { googlecode } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { foundation } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 interface FileInfo {
   title: string;
@@ -25,7 +25,7 @@ const UIGalleryComponent = ({
   const [selectedFile, setSelectedFile] = useState<FileInfo | null>(
     files && files.length > 0 ? files[0] : null
   );
-  const syntaxTheme = googlecode;
+  const syntaxTheme = foundation;
 
   const modifiedTheme = {
     ...syntaxTheme,
@@ -33,6 +33,7 @@ const UIGalleryComponent = ({
       ...syntaxTheme.hljs,
       background: "transparent",
       padding: "0",
+      color:"#6b7280"
     },
   };
 
@@ -73,9 +74,9 @@ const UIGalleryComponent = ({
         <>
           {/* Code Display */}
           {selectedFile && (
-            <div className="max-h-[500px] w-full overflow-auto no-scrollbar bg-lightBg relative border">
+            <div className="max-h-[500px] w-full overflow-auto no-scrollbar bg-lightBg dark:bg-darkSecondaryBg relative border dark:border-darkBgBorder">
               {files && files.length > 0 && (
-                <div className="flex border-b w-full sticky top-0 bg-lightBg">
+                <div className="flex border-b w-full sticky top-0 bg-lightBg dark:border-b-darkBgBorder dark:bg-darkSecondaryBg">
                   {files.map((file) => (
                     <button
                       key={file.path}
