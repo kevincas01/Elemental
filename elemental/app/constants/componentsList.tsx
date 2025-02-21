@@ -27,6 +27,9 @@ import RevealText from "../Components/UIGallery/TextComponents/RevealText";
 import SlidingText from "../Components/UIGallery/TextComponents/SlidingText";
 import LiftButton from "../Components/UIGallery/ButtonComponents/LiftButton";
 import WetPaintButton from "../Components/UIGallery/ButtonComponents/WetPaintButton";
+import LinksRevealCard from "../Components/UIGallery/CardComponents/LinksRevealCard";
+import Envelope from "../Components/UIGallery/CardComponents/Envelope";
+import { FileGroup } from "../Types/files";
 
 export interface listItem {
   name: string;
@@ -126,6 +129,8 @@ export const componentsList: listItem[] = [
   },
 ];
 
+// files: {filegroup:string, files:{ language: string; title: string; path: string }[]}[]
+// { language: string; title: string; path: string }[];
 export const componentMappings: Record<
   string,
   {
@@ -134,7 +139,7 @@ export const componentMappings: Record<
     elements: {
       title: string;
       component: React.ReactNode;
-      files: { language: string; title: string; path: string }[];
+      fileGroups: FileGroup[];
     }[];
   }
 > = {
@@ -163,22 +168,32 @@ export const componentMappings: Record<
       {
         title: "Lift Button",
         component: <LiftButton />,
-        files: [
+        fileGroups: [
           {
-            language: "javascript",
-            title: "LiftButton.tsx",
-            path: "ButtonComponents/LiftButton.tsx",
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "LiftButton.tsx",
+                path: "ButtonComponents/LiftButton.tsx",
+              },
+            ],
           },
         ],
       },
       {
         title: "Wet Paint Button",
         component: <WetPaintButton />,
-        files: [
+        fileGroups: [
           {
-            language: "javascript",
-            title: "WetPaintButton.tsx",
-            path: "ButtonComponents/WetPaintButton.tsx",
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "WetPaintButton.tsx",
+                path: "ButtonComponents/WetPaintButton.tsx",
+              },
+            ],
           },
         ],
       },
@@ -191,33 +206,95 @@ export const componentMappings: Record<
       {
         title: "Bubble Card",
         component: <BubbleCard />,
-        files: [
+        fileGroups: [
           {
-            language: "javascript",
-            title: "BubbleCard.tsx",
-            path: "CardComponents/BubbleCard.tsx",
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "BubbleCard.tsx",
+                path: "CardComponents/BubbleCard.tsx",
+              },
+            ],
           },
         ],
       },
       {
         title: "Flip Card",
         component: <FlipCard />,
-        files: [
+        fileGroups: [
           {
-            language: "javascript",
-            title: "FlipCard.tsx",
-            path: "CardComponents/FlipCard.tsx",
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "FlipCard.tsx",
+                path: "CardComponents/FlipCard.tsx",
+              },
+            ],
           },
         ],
       },
       {
         title: "Links Hover Card",
         component: <LinksHoverCard />,
-        files: [
+        fileGroups: [
           {
-            language: "javascript",
-            title: "LinksHoverCard.tsx",
-            path: "CardComponents/LinksHoverCard.tsx",
+            filegroup: "typescript/css",
+            files: [
+              {
+                language: "javascript",
+                title: "LinksHoverCard.tsx",
+                path: "CardComponents/LinksHoverCard.tsx",
+              },
+              {
+                language: "css",
+                title: "LinksHoverCard.css",
+                path: "LinksHoverCard.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Links Reveal Card",
+        component: <LinksRevealCard />,
+        fileGroups: [
+          {
+            filegroup: "typescript/css",
+            files: [
+              {
+                language: "javascript",
+                title: "LinksRevealCard.tsx",
+                path: "CardComponents/LinksRevealCard.tsx",
+              },
+              {
+                language: "css",
+                title: "LinksRevealCard.css",
+                path: "LinksRevealCard.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Envelope Card",
+        component: <Envelope />,
+        fileGroups: [
+          {
+            filegroup: "typescript/css",
+            files: [
+              {
+                language: "javascript",
+                title: "Envelope.tsx",
+                path: "CardComponents/Envelope.tsx",
+              },
+              {
+                language: "css",
+                title: "Envelope.css",
+                path: "Envelope.css",
+              },
+            ],
           },
         ],
       },
@@ -258,11 +335,16 @@ export const componentMappings: Record<
       {
         title: "Sliding Tabs Selector",
         component: <SlidingTabSelector />,
-        files: [
+        fileGroups: [
           {
-            language: "javascript",
-            title: "SlidingTabSelector.tsx",
-            path: "TabsComponents/SlidingTabSelector.tsx",
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "SlidingTabSelector.tsx",
+                path: "TabsComponents/SlidingTabSelector.tsx",
+              },
+            ],
           },
         ],
       },
@@ -275,22 +357,37 @@ export const componentMappings: Record<
       {
         title: "Slide Mask Reveal Text",
         component: <RevealText text="Elemental" />,
-        files: [
+        fileGroups: [
           {
-            language: "javascript",
-            title: "RevealText.tsx",
-            path: "TextComponents/RevealText.tsx",
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "RevealText.tsx",
+                path: "TextComponents/RevealText.tsx",
+              },
+            ],
           },
         ],
       },
       {
         title: "Sliding Text",
         component: <SlidingText />,
-        files: [
+        fileGroups: [
           {
-            language: "javascript",
-            title: "SlidingText.tsx",
-            path: "TextComponents/SlidingText.tsx",
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "SlidingText.tsx",
+                path: "TextComponents/SlidingText.tsx",
+              },
+              {
+                language: "css",
+                title: "SlidingText.css",
+                path: "SlidingText.css",
+              },
+            ],
           },
         ],
       },
