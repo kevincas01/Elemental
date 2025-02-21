@@ -26,13 +26,13 @@ const DrippingPaint = ({
       className={`group absolute box-border origin-top`}
       style={{
         left: `${leftOffset}%`,
-        bottom: `${yOffset*4}px`,
+        bottom: `${yOffset * 4}px`,
       }}
     >
       <div
         className={`absolute origin-top -left-[10px]`}
         style={{
-          top: `${yOffset*4}px`,
+          top: `${yOffset * 4}px`,
         }}
       >
         <svg
@@ -55,7 +55,7 @@ const DrippingPaint = ({
       <div
         className={`absolute origin-top left-[8px]`}
         style={{
-          top: `${yOffset*4}px`,
+          top: `${yOffset * 4}px`,
         }}
       >
         <svg
