@@ -74,7 +74,7 @@ const UIGalleryComponent = ({
           {/* Code Display */}
           {selectedFile && (
             <div className="max-h-[500px] w-full overflow-auto no-scrollbar bg-lightBg relative border">
-              {files && files.length > 1 && (
+              {files && files.length > 0 && (
                 <div className="flex border-b w-full sticky top-0 bg-lightBg">
                   {files.map((file) => (
                     <button
