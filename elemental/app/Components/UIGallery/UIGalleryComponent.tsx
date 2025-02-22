@@ -101,11 +101,10 @@ const UIGalleryComponent = ({
                 <SyntaxHighlighter
                   language={selectedFile.language || "javascript"}
                   showLineNumbers
-                  wrapLongLines
-                  wrapLines
+                  className={"no-scrollbar"}
                   style={modifiedTheme}
                   lineNumberStyle={{
-                    display: "flex",
+
                     justifyContent: "start",
                     paddingLeft: "5px",
                   }}
