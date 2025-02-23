@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-
 interface UIGalleryComponentProps {
   title: string;
   children: React.ReactNode;
