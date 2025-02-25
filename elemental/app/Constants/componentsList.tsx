@@ -394,5 +394,3 @@ export const componentMappings: Record<
   },
   toggle: { name: "Toggle", icon: <ToggleOffOutlinedIcon />, elements: [] },
 };
-
-export default null;
