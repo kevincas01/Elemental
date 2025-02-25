@@ -9,7 +9,7 @@ const page = () => {
       <p>
         All components are built with React, Tailwind CSS, and vanilla
         JavaScript or CSS, ensuring a lightweight and simple approach. We focus
-        on delivering code that doesn't rely on any extra packages or libraries,
+        on delivering code that doesn&rsquo;t rely on any extra packages or libraries,
         so you can easily integrate components into your project without
         additional dependencies. Everything is designed to be intuitive and
         customizable, keeping up with the latest versions of React and Tailwind.

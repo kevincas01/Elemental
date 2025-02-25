@@ -2,8 +2,8 @@ import { File, FileGroup } from "@/app/Types/files";
 import React, { Dispatch, SetStateAction } from "react";
 interface FileSelectionProps {
   selectedGroupIndex: number;
-  selectedFile: File |null ;
-  setSelectedFile: Dispatch<SetStateAction<File|null>>;
+  selectedFile: File | null;
+  setSelectedFile: Dispatch<SetStateAction<File | null>>;
   fileGroups: FileGroup[];
 }
 const FileSelection = ({
