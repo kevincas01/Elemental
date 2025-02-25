@@ -1,9 +1,11 @@
 "use client";
 import { File, FileGroup } from "@/app/Types/files";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
-
+import UITabSelection from "./UITabSelection";
+import FileGroupSelection from "./FileGroupSelection";
+import FileSelection from "./FileSelection";
 interface UIGalleryComponentProps {
   title: string;
   children: React.ReactNode;
@@ -17,11 +19,12 @@ const UIGalleryComponent = ({
 }: UIGalleryComponentProps) => {
   const [activeTab, setActiveTab] = useState<"view" | "code">("view");
   const [selectedGroupIndex, setSelectedGroupIndex] = useState(0);
-  const [selectedFile, setSelectedFile] = useState<File | null>(
-    fileGroups && fileGroups.length > 0 && fileGroups[0].files.length > 0
-      ? fileGroups[0].files[0]
-      : null
-  );
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+  useEffect(() => {
+    if (!fileGroups) return;
+    setSelectedFile(fileGroups[selectedGroupIndex].files[0]);
+  }, [selectedGroupIndex]);
 
   const syntaxTheme = anOldHope;
 
@@ -39,30 +42,7 @@ const UIGalleryComponent = ({
     <div className="flex flex-col gap-2">
       <div className="flex justify-between">
         <h2 className="text-2xl font-semibold">{title}</h2>
-
-        {/* Tabs for View & Code */}
-        <div className="flex">
-          <button
-            className={`px-4 py-2 cursor-pointer ${
-              activeTab === "view"
-                ? "border-b-3 border-primary text-primary"
-                : "text-grayText"
-            }`}
-            onClick={() => setActiveTab("view")}
-          >
-            View
-          </button>
-          <button
-            className={`px-4 py-2 cursor-pointer ${
-              activeTab === "code"
-                ? "border-b-3 border-primary text-primary"
-                : "text-grayText"
-            }`}
-            onClick={() => setActiveTab("code")}
-          >
-            Code
-          </button>
-        </div>
+        <UITabSelection activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
       {activeTab === "view" ? (
@@ -76,23 +56,18 @@ const UIGalleryComponent = ({
             <div className="max-h-[500px] w-full overflow-auto no-scrollbar bg-lightBg dark:bg-darkSecondaryBg relative border dark:border-darkBgBorder">
               <div className="sticky top-0 flex justify-between text-lightTextContrast dark:text-darkTextContrast bg-lightBg dark:border-b-darkBgBorder dark:bg-darkSecondaryBg border-b items-center pr-2">
                 {fileGroups[selectedGroupIndex].files.length > 0 && (
-                  <div className="flex w-full sticky top-0 ">
-                    {fileGroups[selectedGroupIndex].files.map((file) => (
-                      <button
-                        key={file.path}
-                        onClick={() => setSelectedFile(file)}
-                        className={`p-3 ${
-                          selectedFile?.path === file.path
-                            ? "bg-primary"
-                            : "cursor-pointer"
-                        }`}
-                      >
-                        {file.title}
-                      </button>
-                    ))}
-                  </div>
+                  <FileSelection
+                    selectedGroupIndex={selectedGroupIndex}
+                    selectedFile={selectedFile}
+                    setSelectedFile={setSelectedFile}
+                    fileGroups={fileGroups}
+                  />
                 )}
-                {fileGroups[selectedGroupIndex].filegroup}
+                <FileGroupSelection
+                  selectedGroupIndex={selectedGroupIndex}
+                  setSelectedGroupIndex={setSelectedGroupIndex}
+                  fileGroups={fileGroups}
+                />
               </div>
 
               {/* Code Display */}
@@ -103,7 +78,6 @@ const UIGalleryComponent = ({
                   className={"no-scrollbar"}
                   style={modifiedTheme}
                   lineNumberStyle={{
-
                     justifyContent: "start",
                     paddingLeft: "5px",
                   }}
