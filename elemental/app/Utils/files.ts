@@ -1,11 +1,11 @@
-import { join } from "path";
 import { readFileSync } from "fs";
+import { join } from "path";
 
 export const getFileContent = (filePath: string, language: string): string => {
   try {
-    // Determine the base path based on language
-    const basePath =
-      language === "css" ? "app/Styles/UIGallery/" : "app/Components/UIGallery/";
+    const basePath = language === "css"
+      ? "app/Styles/UIGallery/"
+      : "app/Components/UIGallery/";
 
     const fullPath = join(process.cwd(), basePath, filePath);
 
