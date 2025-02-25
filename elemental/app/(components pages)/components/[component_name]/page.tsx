@@ -5,11 +5,12 @@ import UIGalleryComponent from "@/app/Components/UIGallery/UIGalleryComponent";
 import { getFileContent } from "@/app/Utils/files";
 
 interface PageProps {
-  params: { component_name: string };
+  params: Promise<{ component_name: string }>;
 }
 
-export default function Page({ params }: PageProps) {
-  const component = componentMappings[params.component_name];
+export default async function Page({ params }: PageProps) {
+  const componentName = (await params).component_name;
+  const component = componentMappings[componentName];
 
   if (!component) {
     return <div>Component not found</div>;
@@ -22,7 +23,7 @@ export default function Page({ params }: PageProps) {
       ...group,
       files: group.files.map((file) => ({
         ...file,
-        content: getFileContent(file.path, file.language), 
+        content: getFileContent(file.path, file.language),
       })),
     })),
   }));
@@ -40,7 +41,11 @@ export default function Page({ params }: PageProps) {
 
       <div className="flex flex-col gap-10 pb-10">
         {elementsWithFiles.map((element, index) => (
-          <UIGalleryComponent title={element.title} key={index} fileGroups={element.fileGroups}>
+          <UIGalleryComponent
+            title={element.title}
+            key={index}
+            fileGroups={element.fileGroups}
+          >
             {element.component}
           </UIGalleryComponent>
         ))}
