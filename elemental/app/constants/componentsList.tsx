@@ -18,7 +18,6 @@ import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
 import AutoAwesomeMotionOutlinedIcon from "@mui/icons-material/AutoAwesomeMotionOutlined";
 import TextFieldsIcon from "@mui/icons-material/TextFields";
 import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
-import dynamic from "next/dynamic";
 import BubbleCard from "../Components/UIGallery/CardComponents/BubbleCard";
 import FlipCard from "../Components/UIGallery/CardComponents/FlipCard";
 import LinksHoverCard from "../Components/UIGallery/CardComponents/LinksHoverCard";
