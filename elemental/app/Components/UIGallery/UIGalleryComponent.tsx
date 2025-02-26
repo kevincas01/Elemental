@@ -46,7 +46,7 @@ const UIGalleryComponent = ({
       </div>
 
       {activeTab === "view" ? (
-        <div className="bg-lightSecondaryBg dark:bg-darkSecondaryBg h-96 w-full flex flex-col justify-center items-center py-10">
+        <div className="bg-lightSecondaryBg dark:bg-darkSecondaryBg h-96 w-full flex flex-col justify-center items-center py-10 relative">
           {children}
         </div>
       ) : (

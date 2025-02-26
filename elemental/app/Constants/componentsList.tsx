@@ -30,6 +30,7 @@ import LinksRevealCard from "../Components/UIGallery/CardComponents/LinksRevealC
 import Envelope from "../Components/UIGallery/CardComponents/Envelope";
 import { FileGroup } from "../Types/files";
 import ZoomOutProfile from "../Components/UIGallery/CardComponents/ZoomOutProfile";
+import ToggleDarkSwitch from "../Components/UIGallery/ToggleComponents/ToggleDarkSwitch";
 
 export interface listItem {
   name: string;
@@ -309,7 +310,7 @@ export const componentMappings: Record<
                 language: "javascript",
                 title: "ZoomOutProfile.tsx",
                 path: "CardComponents/ZoomOutProfile.tsx",
-              }
+              },
             ],
           },
         ],
@@ -409,5 +410,27 @@ export const componentMappings: Record<
       },
     ],
   },
-  toggle: { name: "Toggle", icon: <ToggleOffOutlinedIcon />, elements: [] },
+  // ToggleDarkSwitch
+  toggle: {
+    name: "Toggle" ,
+    icon: <ToggleOffOutlinedIcon />,
+    elements: [
+      {
+        title: "Toggle Dark Switch",
+        component: <ToggleDarkSwitch />,
+        fileGroups: [
+          {
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "ToggleDarkSwitch.tsx",
+                path: "ToggleComponents/ToggleDarkSwitch.tsx",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 };
