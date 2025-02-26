@@ -29,6 +29,7 @@ import WetPaintButton from "../Components/UIGallery/ButtonComponents/WetPaintBut
 import LinksRevealCard from "../Components/UIGallery/CardComponents/LinksRevealCard";
 import Envelope from "../Components/UIGallery/CardComponents/Envelope";
 import { FileGroup } from "../Types/files";
+import ZoomOutProfile from "../Components/UIGallery/CardComponents/ZoomOutProfile";
 
 export interface listItem {
   name: string;
@@ -293,6 +294,22 @@ export const componentMappings: Record<
                 title: "Envelope.css",
                 path: "Envelope.css",
               },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Zoom Out Profile Card",
+        component: <ZoomOutProfile />,
+        fileGroups: [
+          {
+            filegroup: "typescript/tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "ZoomOutProfile.tsx",
+                path: "CardComponents/ZoomOutProfile.tsx",
+              }
             ],
           },
         ],
