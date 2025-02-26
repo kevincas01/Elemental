@@ -1,0 +1,132 @@
+.envelope-card {
+  width: 300px;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+.envelope-card-main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+}
+
+/* Top, Bottom, Right, & Left Side Polygons General Styling  */
+.envelope-top {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+
+  background-color: black;
+  clip-path: polygon(50% 50%, 100% 0, 0 0);
+  /* If you want the top polygon to be a pentagon, change the clip path to the following */
+  /* clip-path: polygon(0 0, 100% 0, 100% 17%, 50% 50%, 0 17%); */
+
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s;
+}
+
+.envelope-bottom {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: rgb(15, 15, 15);
+  clip-path: polygon(50% 50%, 100% 100%, 0% 100%);
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s;
+}
+
+.envelope-side {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  z-index: 30;
+
+  background-color: rgb(15, 15, 15);
+  clip-path: polygon(50% 50%, 0% 0%, 0% 100%);
+
+  z-index: 15;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.envelope-left {
+  left: 0;
+}
+
+.envelope-right {
+  right: 0;
+  transform: scale(-1, 1);
+}
+
+/* Card Hover: Top Polygon Position Change */
+.envelope-card:hover .envelope-top {
+  transform: translateY(-100%) scale(1, -1);
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/* Card Content General Styling & Hover */
+.envelope-card-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+
+  border: 1px rgb(121, 121, 121) solid;
+  background-color: white;
+  color: oklch(0.704 0.191 22.216);
+  font-size: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.envelope-card:hover .envelope-card-content {
+  top: -50%;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
+}
+
+/* Seal General Styling & Hover */
+.envelope-seal {
+  min-width: 40px;
+  aspect-ratio: 1/1;
+
+  padding: 2px;
+  opacity: 1;
+  border-radius: 30px;
+  z-index: 30;
+
+  position: absolute;
+  top: 50%;
+  right: 50%;
+
+  background-color: oklch(0.704 0.191 22.216);
+  color: white;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: translate(50%, -50%);
+  transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 2s;
+}
+
+.envelope-card:hover .envelope-seal {
+  right: 35%;
+  top: 25%;
+  transform: rotate(90deg);
+  opacity: 0;
+  transition: all .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}

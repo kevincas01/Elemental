@@ -4,11 +4,9 @@ export const getFileContent = (filePath: string, language: string): string => {
   try {
     // Determine the base path based on language
     const basePath =
-      language === "css"
-        ? "./app/Styles/UIGallery/"
-        : "./app/Components/UIGallery/";
+      "/public/UIGallery/" + (language === "css" ? "Styles" : "Components");
 
-    const fullPath = join(process.cwd(), basePath + filePath);
+    const fullPath = join(process.cwd(), basePath, filePath);
 
     return readFileSync(resolve(fullPath), "utf-8");
   } catch (error) {

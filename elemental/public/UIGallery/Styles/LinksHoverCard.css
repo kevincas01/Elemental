@@ -1,0 +1,132 @@
+.hover-card {
+  position: relative;
+  width: 200px;
+  max-width: 200px;
+
+  aspect-ratio: 1/1;
+  background-image: linear-gradient(
+    45deg,
+    #ff7eb3 0%,
+    #ff758c 50%,
+    #ffb07c 100%
+  );
+
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+/* Title General Styling & Card Hover Change */
+.hover-title {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.hover-card:hover .hover-title {
+  transform: translate(70px, -52px);
+  letter-spacing: 0px;
+}
+/* Box General Styling & Hover */
+.hover-box {
+  position: absolute;
+  padding: 10px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.389);
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.hover-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.hover-box:hover::before {
+  opacity: 1;
+}
+
+/* Box Icon  */
+.hover-icon {
+  display: inline-block;
+  width: 20px;
+  fill: black;
+  transition: all 0.5s ease-in-out;
+  height: 20px;
+}
+
+.hover-box:hover .hover-icon {
+  fill: white;
+  filter: drop-shadow(0 0 5px white);
+}
+
+/* Box Sizes & Starting Positions */
+.hover-box1 {
+  width: 70%;
+  aspect-ratio: 1/1;
+  bottom: -70%;
+  left: -70%;
+}
+
+.hover-box2 {
+  width: 55%;
+  aspect-ratio: 1/1;
+  bottom: -55%;
+  left: -55%;
+  transition-delay: 0.2s;
+}
+
+.hover-box3 {
+  width: 40%;
+  aspect-ratio: 1/1;
+  bottom: -40%;
+  left: -40%;
+  transition-delay: 0.4s;
+}
+
+.hover-box4 {
+  width: 25%;
+  aspect-ratio: 1/1;
+  bottom: -25%;
+  left: -25%;
+  transition-delay: 0.6s;
+}
+
+/* Card Hover: Box Position Change */
+.hover-card:hover .hover-box {
+  bottom: 0px;
+  left: 0px;
+}
+
+/* Box Hover Colors */
+.hover-box1::before {
+  background: radial-gradient(circle at 30% 107%, white 0%, #0077b5 90%);
+}
+
+.hover-box2::before {
+  background: radial-gradient(circle at 30% 107%, white 0%, black 90%);
+}
+.hover-box3::before {
+  background: radial-gradient(circle at 30% 107%, #969fff 0%, #b349ff 90%);
+}
+
+.hover-box4:before {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #4158d0 0%,
+    #c850c0 50%,
+    #ffcc70 100%
+  );
+}
