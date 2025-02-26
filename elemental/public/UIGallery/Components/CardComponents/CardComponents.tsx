@@ -1,5 +1,5 @@
 
-import UIGalleryComponent from "../UIGalleryComponent";
+import UIGalleryComponent from "@/app/Components/UIGallery/UIGalleryComponent";
 import BubbleCard from "./BubbleCard";
 import FlipCard from "./FlipCard";
 import LinksHoverCard from "./LinksHoverCard";

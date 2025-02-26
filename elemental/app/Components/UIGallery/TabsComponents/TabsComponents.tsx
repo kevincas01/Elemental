@@ -1,5 +1,5 @@
 import React from "react";
-import UIGalleryComponent from "../UIGalleryComponent";
+import UIGalleryComponent from "@/app/Components/UIGallery/UIGalleryComponent";
 import { SlidingTabSelector } from "./SlidingTabSelector";
 
 const TabsComponent = () => {
