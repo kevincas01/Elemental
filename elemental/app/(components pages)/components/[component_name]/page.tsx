@@ -41,7 +41,7 @@ export default async function Page({ params }: PageProps) {
 
       {elementsWithFiles.length > 0 ? (
         <>
-          <div className="flex flex-col gap-10 pb-10 h-full">
+          <div className="flex flex-col gap-10 pb-10">
             {elementsWithFiles.map((element, index) => (
               <UIGalleryComponent
                 title={element.title}
@@ -55,9 +55,9 @@ export default async function Page({ params }: PageProps) {
         </>
       ) : (
         <>
-          <div className="flex flex-1 flex-col text-center items-center justify-center p-10 ">
+          <div className="flex flex-1 flex-col text-center items-center justify-center">
             <h2 className="text-2xl font-semibold ">
-              No Components Available at the moment
+              No components available at the moment
             </h2>
             <ConstructionIcon sx={{fontSize:"120px"}}/>
             <p className="text-gray-500 mt-2">
