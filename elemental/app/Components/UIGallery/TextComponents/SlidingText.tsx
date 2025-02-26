@@ -4,13 +4,12 @@ const SlidingText = () => {
   return (
     <div className="sliding-container">
       <div className="sliding-loader">
-        <p>loading</p>
+        <p>I am a</p>
         <div className="sliding-words">
-          <span className="sliding-word">buttons</span>
-          <span className="sliding-word">forms</span>
-          <span className="sliding-word">switches</span>
-          <span className="sliding-word">cards</span>
-          <span className="sliding-word">buttons</span>
+          <span className="sliding-word">UX designer</span>
+          <span className="sliding-word">Frontend Developer</span>
+          <span className="sliding-word">Backend Developer</span>
+          <span className="sliding-word">UX designer</span>
         </div>
       </div>
     </div>
