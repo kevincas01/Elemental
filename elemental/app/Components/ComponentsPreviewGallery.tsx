@@ -59,7 +59,7 @@ const ComponentsPreviewGallery = () => {
 
 const GalleryComponent = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="p-5 bg-lightSecondaryBg dark:bg-darkSecondaryBg rounded-lg flex flex-col justify-center items-center ">
+    <div className="p-4 bg-lightSecondaryBg dark:bg-darkSecondaryBg rounded-lg flex flex-col justify-center items-center ">
       {children}
     </div>
   );
