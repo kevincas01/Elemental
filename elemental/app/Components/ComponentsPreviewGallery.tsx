@@ -9,6 +9,7 @@ import LinksRevealCard from "./UIGallery/CardComponents/LinksRevealCard";
 import BubbleCard from "./UIGallery/CardComponents/BubbleCard";
 import FlipCard from "./UIGallery/CardComponents/FlipCard";
 import SlidingText from "./UIGallery/TextComponents/SlidingText";
+import ZoomOutProfile from "./UIGallery/CardComponents/ZoomOutProfile";
 
 const ComponentsPreviewGallery = () => {
   return (
@@ -39,7 +40,9 @@ const ComponentsPreviewGallery = () => {
       </div>
       <div className="pl-[275px] grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
         <div></div>
-        <div></div>
+        <GalleryComponent>
+          <ZoomOutProfile />
+        </GalleryComponent>
         <GalleryComponent>
           <LinksRevealCard />
         </GalleryComponent>
