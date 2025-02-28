@@ -14,9 +14,9 @@ const page = () => {
         additional dependencies. Everything is designed to be intuitive and
         customizable, keeping up with the latest versions of React and Tailwind.
       </p>
-      <h2 className="text-2xl">Sections</h2>
+      <h2 className="text-3xl">Sections</h2>
       <ComponentGallery list={sectionsList} />
-      <h2 className="text-2xl">Components</h2>
+      <h2 className="text-3xl">Components</h2>
       <ComponentGallery list={componentsList} />
     </div>
   );
