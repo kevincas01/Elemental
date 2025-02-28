@@ -41,7 +41,7 @@ const UIGalleryComponent = ({
   return (
     <div className="flex flex-col gap-2">
       <div className="flex justify-between">
-        <h2 className="text-2xl font-semibold">{title}</h2>
+        <h2 className="font-semibold leading-none">{title}</h2>
         <UITabSelection activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
