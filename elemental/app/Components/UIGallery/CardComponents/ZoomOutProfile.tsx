@@ -22,7 +22,7 @@ const ZoomOutProfile = () => {
           <span className="font-bold text-2xl">My Name!</span>
           <p>This is my introduction! Take the time to get to know me!</p>
         </div>
-        <div className="flex justify-between items-center absolute bottom-3 left-4 right-4 text-xs">
+        <div className="flex justify-between items-center absolute bottom-1.5 left-4 right-4 text-xs">
           <div className="flex gap-2">
             <GitHubIcon />
             <LinkedInIcon />
