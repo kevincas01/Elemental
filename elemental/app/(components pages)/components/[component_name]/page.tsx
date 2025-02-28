@@ -37,7 +37,7 @@ export default async function Page({ params }: PageProps) {
         <KeyboardDoubleArrowRightOutlinedIcon />
         <span>{component.name}</span>
       </div>
-      <h1>{component.name}</h1>
+      <h1 className="text-primary">{component.name}</h1>
 
       {elementsWithFiles.length > 0 ? (
         <>
