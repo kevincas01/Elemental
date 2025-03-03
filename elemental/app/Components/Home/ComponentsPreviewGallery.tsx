@@ -1,15 +1,14 @@
 import React, { ReactNode } from "react";
-import WetPaintButton from "./UIGallery/ButtonComponents/WetPaintButton";
-
-import LinksHoverCard from "./UIGallery/CardComponents/LinksHoverCard";
-import SlideRevealCard from "./UIGallery/CardComponents/SlideRevealCard";
-import RevealText from "./UIGallery/TextComponents/RevealText";
-import LiftButton from "./UIGallery/ButtonComponents/LiftButton";
-import LinksRevealCard from "./UIGallery/CardComponents/LinksRevealCard";
-import BubbleCard from "./UIGallery/CardComponents/BubbleCard";
-import FlipCard from "./UIGallery/CardComponents/FlipCard";
-import SlidingText from "./UIGallery/TextComponents/SlidingText";
-import ZoomOutProfile from "./UIGallery/CardComponents/ZoomOutProfile";
+import WetPaintButton from "../UIGallery/ButtonComponents/WetPaintButton";
+import LinksHoverCard from "../UIGallery/CardComponents/LinksHoverCard";
+import SlideRevealCard from "../UIGallery/CardComponents/SlideRevealCard";
+import RevealText from "../UIGallery/TextComponents/RevealText";
+import LiftButton from "../UIGallery/ButtonComponents/LiftButton";
+import LinksRevealCard from "../UIGallery/CardComponents/LinksRevealCard";
+import BubbleCard from "../UIGallery/CardComponents/BubbleCard";
+import FlipCard from "../UIGallery/CardComponents/FlipCard";
+import SlidingText from "../UIGallery/TextComponents/SlidingText";
+import ZoomOutProfile from "../UIGallery/CardComponents/ZoomOutProfile";
 
 const ComponentsPreviewGallery = () => {
   return (

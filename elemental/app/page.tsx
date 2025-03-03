@@ -1,5 +1,5 @@
 import Card from "./Components/Card";
-import ComponentsPreviewGallery from "./Components/ComponentsPreviewGallery";
+import ComponentsPreviewGallery from "./Components/Home/ComponentsPreviewGallery";
 import Hero from "./Components/Hero/Hero";
 
 import TouchAppOutlinedIcon from "@mui/icons-material/TouchAppOutlined";
