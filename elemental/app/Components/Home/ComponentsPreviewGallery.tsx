@@ -9,6 +9,7 @@ import BubbleCard from "../UIGallery/CardComponents/BubbleCard";
 import FlipCard from "../UIGallery/CardComponents/FlipCard";
 import SlidingText from "../UIGallery/TextComponents/SlidingText";
 import ZoomOutProfile from "../UIGallery/CardComponents/ZoomOutProfile";
+import LinkExpandCircle from "../UIGallery/OtherComponents/LinkExpandCircle";
 
 const ComponentsPreviewGallery = () => {
   return (
@@ -50,6 +51,9 @@ const ComponentsPreviewGallery = () => {
         </GalleryComponent>
         <GalleryComponent>
           <SlideRevealCard />
+        </GalleryComponent>
+        <GalleryComponent>
+          <LinkExpandCircle />
         </GalleryComponent>
       </div>
     </div>
