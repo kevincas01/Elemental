@@ -31,6 +31,7 @@ import Envelope from "../Components/UIGallery/CardComponents/Envelope";
 import { FileGroup } from "../Types/files";
 import ZoomOutProfile from "../Components/UIGallery/CardComponents/ZoomOutProfile";
 import ToggleDarkSwitch from "../Components/UIGallery/ToggleComponents/ToggleDarkSwitch";
+import LinkExpandCircle from "../Components/UIGallery/OtherComponents/LinkExpandCircle";
 
 export interface listItem {
   name: string;
@@ -344,7 +345,24 @@ export const componentMappings: Record<
     icon: <MenuIcon />,
     elements: [],
   },
-  other: { name: "Other", icon: <WorkspacesOutlinedIcon />, elements: [] },
+  other: { name: "Other", icon: <WorkspacesOutlinedIcon />, elements: [
+    {
+      title: "Link Expand Circle",
+      component: <LinkExpandCircle />,
+      fileGroups: [
+        {
+          filegroup: "typescript/tailwind",
+          files: [
+            {
+              language: "javascript",
+              title: "LinkExpandCircle.tsx",
+              path: "OtherComponents/LinkExpandCircle.tsx",
+            },
+          ],
+        },
+      ],
+    },
+  ] },
   tabs: {
     name: "Tabs",
     icon: <AutoAwesomeMotionOutlinedIcon />,
