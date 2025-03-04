@@ -32,6 +32,7 @@ import { FileGroup } from "../Types/files";
 import ZoomOutProfile from "../Components/UIGallery/CardComponents/ZoomOutProfile";
 import ToggleDarkSwitch from "../Components/UIGallery/ToggleComponents/ToggleDarkSwitch";
 import LinkExpandCircle from "../Components/UIGallery/OtherComponents/LinkExpandCircle";
+import SpinCarousal3d from "../Components/UIGallery/CarousalComponents/SpinCarousal3d";
 
 export interface listItem {
   name: string;
@@ -321,7 +322,28 @@ export const componentMappings: Record<
   carousels: {
     name: "Carousels",
     icon: <ViewCarouselOutlinedIcon />,
-    elements: [],
+    elements: [{
+      title: "Spin Carousal 3D",
+      component: <SpinCarousal3d />,
+      fileGroups: [
+        {
+          filegroup: "Typescript/CSS",
+          files: [
+            {
+              language: "javascript",
+              title: "SpinCarousal3d.tsx",
+              path: "CarousalComponents/SpinCarousal3d.tsx",
+            },
+            {
+              language: "css",
+              title: "SpinCarousal3d.css",
+              path: "SpinCarousal3d.css",
+            },
+          ],
+          
+        },
+      ],
+    },],
   },
   "dropdown-menus": {
     name: "Dropdown Menus",
