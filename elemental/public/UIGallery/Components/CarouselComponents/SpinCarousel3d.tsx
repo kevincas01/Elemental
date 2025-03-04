@@ -1,10 +1,10 @@
 import React from "react";
-import "@/app/Styles/UIGallery/SpinCarousal3d.css";
+import "@/app/Styles/UIGallery/SpinCarousel3d.css";
 
-const SpinCarousal3d = () => {
+const SpinCarousel3d = () => {
 
   return (
-    <div className="card-3d">
+    <div className="carousel-3d">
       <div></div>
       <div></div>
       <div></div>
@@ -19,4 +19,4 @@ const SpinCarousal3d = () => {
   );
 };
 
-export default SpinCarousal3d;
+export default SpinCarousel3d;
