@@ -172,7 +172,7 @@ export const componentMappings: Record<
         component: <LiftButton />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
@@ -188,7 +188,7 @@ export const componentMappings: Record<
         component: <WetPaintButton />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
@@ -210,7 +210,7 @@ export const componentMappings: Record<
         component: <BubbleCard />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
@@ -226,7 +226,7 @@ export const componentMappings: Record<
         component: <FlipCard />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
@@ -242,7 +242,7 @@ export const componentMappings: Record<
         component: <LinksHoverCard />,
         fileGroups: [
           {
-            filegroup: "typescript/css",
+            filegroup: "Typescript/CSS",
             files: [
               {
                 language: "javascript",
@@ -263,7 +263,7 @@ export const componentMappings: Record<
         component: <LinksRevealCard />,
         fileGroups: [
           {
-            filegroup: "typescript/css",
+            filegroup: "Typescript/CSS",
             files: [
               {
                 language: "javascript",
@@ -284,7 +284,7 @@ export const componentMappings: Record<
         component: <Envelope />,
         fileGroups: [
           {
-            filegroup: "typescript/css",
+            filegroup: "Typescript/CSS",
             files: [
               {
                 language: "javascript",
@@ -305,7 +305,7 @@ export const componentMappings: Record<
         component: <ZoomOutProfile />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
@@ -351,7 +351,7 @@ export const componentMappings: Record<
       component: <LinkExpandCircle />,
       fileGroups: [
         {
-          filegroup: "typescript/tailwind",
+          filegroup: "Typescript/Tailwind",
           files: [
             {
               language: "javascript",
@@ -372,7 +372,7 @@ export const componentMappings: Record<
         component: <SlidingTabSelector />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
@@ -394,7 +394,7 @@ export const componentMappings: Record<
         component: <RevealText text="Elemental" />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
@@ -410,7 +410,7 @@ export const componentMappings: Record<
         component: <SlidingText />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
@@ -438,7 +438,7 @@ export const componentMappings: Record<
         component: <ToggleDarkSwitch />,
         fileGroups: [
           {
-            filegroup: "typescript/tailwind",
+            filegroup: "Typescript/Tailwind",
             files: [
               {
                 language: "javascript",
