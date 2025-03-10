@@ -33,6 +33,7 @@ import ZoomOutProfile from "../Components/UIGallery/CardComponents/ZoomOutProfil
 import ToggleDarkSwitch from "../Components/UIGallery/ToggleComponents/ToggleDarkSwitch";
 import LinkExpandCircle from "../Components/UIGallery/OtherComponents/LinkExpandCircle";
 import SpinCarousel3d from "../Components/UIGallery/CarouselComponents/SpinCarousel3d";
+import LightUpButton from "../Components/UIGallery/ButtonComponents/LightUpButton";
 
 export interface listItem {
   name: string;
@@ -200,6 +201,28 @@ export const componentMappings: Record<
           },
         ],
       },
+      {
+        title: "Light Up Button",
+        component: <LightUpButton />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/CSS",
+            files: [
+              {
+                language: "javascript",
+                title: "LightUpButton.tsx",
+                path: "ButtonComponents/LightUpButton.tsx",
+              },
+              {
+                language: "css",
+                title: "LightUpButton.css",
+                path: "LightUpButton.css",
+              },
+            ],
+            
+          },
+        ],
+      }
     ],
   },
   cards: {
