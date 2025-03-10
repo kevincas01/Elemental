@@ -17,18 +17,19 @@
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .dot {
   background-color: black;
-  width: 10px;
+  width: 8px;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  z-index: 20;
 }
 
 .light {
+  position: absolute;
   width: 100%;
   height: 100%;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -51,7 +52,7 @@
   border-radius: 10px;
   transition: 300ms;
   outline: black 2px solid;
-  color: gray;
+  color: black;
 }
 
 /* Hover Effects */
@@ -70,6 +71,3 @@
   );
 }
 
-.light-wrapper:hover .dot {
-  background-color: var(--light-color);
-}
