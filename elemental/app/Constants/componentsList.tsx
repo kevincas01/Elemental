@@ -219,48 +219,15 @@ export const componentMappings: Record<
                 path: "LightUpButton.css",
               },
             ],
-            
           },
         ],
-      }
+      },
     ],
   },
   cards: {
     name: "Cards",
     icon: <RectangleOutlinedIcon />,
     elements: [
-      {
-        title: "Bubble Card",
-        component: <BubbleCard />,
-        fileGroups: [
-          {
-            filegroup: "Typescript/Tailwind",
-            files: [
-              {
-                language: "javascript",
-                title: "BubbleCard.tsx",
-                path: "CardComponents/BubbleCard.tsx",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: "Flip Card",
-        component: <FlipCard />,
-        fileGroups: [
-          {
-            filegroup: "Typescript/Tailwind",
-            files: [
-              {
-                language: "javascript",
-                title: "FlipCard.tsx",
-                path: "CardComponents/FlipCard.tsx",
-              },
-            ],
-          },
-        ],
-      },
       {
         title: "Links Hover Card",
         component: <LinksHoverCard />,
@@ -304,6 +271,39 @@ export const componentMappings: Record<
         ],
       },
       {
+        title: "Bubble Card",
+        component: <BubbleCard />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "BubbleCard.tsx",
+                path: "CardComponents/BubbleCard.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Flip Card",
+        component: <FlipCard />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "FlipCard.tsx",
+                path: "CardComponents/FlipCard.tsx",
+              },
+            ],
+          },
+        ],
+      },
+
+      {
         title: "Envelope Card",
         component: <Envelope />,
         fileGroups: [
@@ -345,28 +345,29 @@ export const componentMappings: Record<
   carousels: {
     name: "Carousels",
     icon: <ViewCarouselOutlinedIcon />,
-    elements: [{
-      title: "Spin Carousel 3D",
-      component: <SpinCarousel3d />,
-      fileGroups: [
-        {
-          filegroup: "Typescript/CSS",
-          files: [
-            {
-              language: "javascript",
-              title: "SpinCarousel3d.tsx",
-              path: "CarouselComponents/SpinCarousel3d.tsx",
-            },
-            {
-              language: "css",
-              title: "SpinCarousel3d.css",
-              path: "SpinCarousel3d.css",
-            },
-          ],
-          
-        },
-      ],
-    },],
+    elements: [
+      {
+        title: "Spin Carousel 3D",
+        component: <SpinCarousel3d />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/CSS",
+            files: [
+              {
+                language: "javascript",
+                title: "SpinCarousel3d.tsx",
+                path: "CarouselComponents/SpinCarousel3d.tsx",
+              },
+              {
+                language: "css",
+                title: "SpinCarousel3d.css",
+                path: "SpinCarousel3d.css",
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
   "dropdown-menus": {
     name: "Dropdown Menus",
@@ -390,24 +391,28 @@ export const componentMappings: Record<
     icon: <MenuIcon />,
     elements: [],
   },
-  other: { name: "Other", icon: <WorkspacesOutlinedIcon />, elements: [
-    {
-      title: "Link Expand Circle",
-      component: <LinkExpandCircle />,
-      fileGroups: [
-        {
-          filegroup: "Typescript/Tailwind",
-          files: [
-            {
-              language: "javascript",
-              title: "LinkExpandCircle.tsx",
-              path: "OtherComponents/LinkExpandCircle.tsx",
-            },
-          ],
-        },
-      ],
-    },
-  ] },
+  other: {
+    name: "Other",
+    icon: <WorkspacesOutlinedIcon />,
+    elements: [
+      {
+        title: "Link Expand Circle",
+        component: <LinkExpandCircle />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "LinkExpandCircle.tsx",
+                path: "OtherComponents/LinkExpandCircle.tsx",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
   tabs: {
     name: "Tabs",
     icon: <AutoAwesomeMotionOutlinedIcon />,
@@ -475,7 +480,7 @@ export const componentMappings: Record<
   },
   // ToggleDarkSwitch
   toggle: {
-    name: "Toggle" ,
+    name: "Toggle",
     icon: <ToggleOffOutlinedIcon />,
     elements: [
       {
