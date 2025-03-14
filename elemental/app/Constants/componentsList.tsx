@@ -34,6 +34,7 @@ import ToggleDarkSwitch from "../Components/UIGallery/ToggleComponents/ToggleDar
 import LinkExpandCircle from "../Components/UIGallery/OtherComponents/LinkExpandCircle";
 import SpinCarousel3d from "../Components/UIGallery/CarouselComponents/SpinCarousel3d";
 import LightUpButton from "../Components/UIGallery/ButtonComponents/LightUpButton";
+import TabGlider from "../Components/UIGallery/TabsComponents/TabGlider";
 
 export interface listItem {
   name: string;
@@ -433,8 +434,30 @@ export const componentMappings: Record<
           },
         ],
       },
+      {
+        title: "Tab Glider",
+        component: <TabGlider />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/CSS",
+            files: [
+              {
+                language: "javascript",
+                title: "TabGlider.tsx",
+                path: "TabsComponents/TabGlider.tsx",
+              },
+              {
+                language: "css",
+                title: "TabGlider.css",
+                path: "TabGlider.css",
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
+  
   text: {
     name: "Text",
     icon: <TextFieldsIcon />,
