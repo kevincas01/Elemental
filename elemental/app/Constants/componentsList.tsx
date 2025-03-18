@@ -36,6 +36,7 @@ import SpinCarousel3d from "../Components/UIGallery/CarouselComponents/SpinCarou
 import LightUpButton from "../Components/UIGallery/ButtonComponents/LightUpButton";
 import TabGlider from "../Components/UIGallery/TabsComponents/TabGlider";
 import FlipTextButton from "../Components/UIGallery/ButtonComponents/FlipTextButton";
+import InfiniteScrollingButton from "../Components/UIGallery/ButtonComponents/InfiniteScrollingButton";
 
 
 export interface listItem {
@@ -241,6 +242,27 @@ export const componentMappings: Record<
                 language: "css",
                 title: "FlipTextButton.css",
                 path: "FlipTextButton.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Infinite Scrolling Button",
+        component: <InfiniteScrollingButton />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/CSS",
+            files: [
+              {
+                language: "javascript",
+                title: "InfiniteScrollingButton.tsx",
+                path: "ButtonComponents/InfiniteScrollingButton.tsx",
+              },
+              {
+                language: "css",
+                title: "InfiniteScrollingButton.css",
+                path: "InfiniteScrollingButton.css",
               },
             ],
           },
