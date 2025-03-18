@@ -1,0 +1,208 @@
+.loader {
+  width: 200px;
+  height: 200px;
+}
+
+.box1,
+.box2,
+.box3 {
+  border: 16px solid #ededed;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+}
+
+.box1 {
+  width: 200px;
+  height: 90px;
+  margin-left: 0px;
+  margin-top: 110px;
+  animation: abox1 4s 1s forwards ease-in-out infinite;
+}
+
+.box2 {
+  width: 90px;
+  height: 90px;
+  margin-left: 0px;
+  margin-top: 0px;
+  animation: abox2 4s 1s forwards ease-in-out infinite;
+}
+
+.box3 {
+  width: 90px;
+  height: 90px;
+  margin-left: 110px;
+  margin-top: 0px;
+  animation: abox3 4s 1s forwards ease-in-out infinite;
+}
+
+@keyframes abox1 {
+  0% {
+    width: 200px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 110px;
+  }
+  12.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 110px;
+  }
+  25% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 110px;
+  }
+  37.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 110px;
+  }
+  50% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 110px;
+  }
+  62.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 110px;
+  }
+  75% {
+    width: 90px;
+    height: 200px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  87.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  100% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+
+@keyframes abox2 {
+  0% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  12.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  25% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  32.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  50% {
+    width: 200px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  62.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 0px;
+  }
+  75% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 0px;
+  }
+  87.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 0px;
+  }
+  100% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 0px;
+  }
+}
+
+@keyframes abox3 {
+  0% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 0px;
+  }
+  12.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 0px;
+  }
+  25% {
+    width: 90px;
+    height: 200px;
+    margin-left: 110px;
+    margin-top: 0px;
+  }
+  37.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 110px;
+  }
+  50% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 110px;
+  }
+  62.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 110px;
+  }
+  75% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 110px;
+  }
+  87.5% {
+    width: 90px;
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 110px;
+  }
+  100% {
+    width: 200px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 110px;
+  }
+}
