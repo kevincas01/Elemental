@@ -464,7 +464,7 @@ export const componentMappings: Record<
               {
                 language: "css",
                 title: "BoxGridLoader.css",
-                path: "LoaderComponents/BoxGridLoader.css",
+                path: "BoxGridLoader.css",
               },
             ],
           },
@@ -485,7 +485,7 @@ export const componentMappings: Record<
               {
                 language: "css",
                 title: "HexagonPulseLoader.css",
-                path: "LoaderComponents/HexagonPulseLoader.css",
+                path: "HexagonPulseLoader.css",
               },
             ],
           },
