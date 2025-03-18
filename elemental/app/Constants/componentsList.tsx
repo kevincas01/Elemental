@@ -35,6 +35,8 @@ import LinkExpandCircle from "../Components/UIGallery/OtherComponents/LinkExpand
 import SpinCarousel3d from "../Components/UIGallery/CarouselComponents/SpinCarousel3d";
 import LightUpButton from "../Components/UIGallery/ButtonComponents/LightUpButton";
 import TabGlider from "../Components/UIGallery/TabsComponents/TabGlider";
+import FlipTextButton from "../Components/UIGallery/ButtonComponents/FlipTextButton";
+
 
 export interface listItem {
   name: string;
@@ -218,6 +220,27 @@ export const componentMappings: Record<
                 language: "css",
                 title: "LightUpButton.css",
                 path: "LightUpButton.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Flip Text Button",
+        component: <FlipTextButton />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/CSS",
+            files: [
+              {
+                language: "javascript",
+                title: "FlipTextButton.tsx",
+                path: "ButtonComponents/FlipTextButton.tsx",
+              },
+              {
+                language: "css",
+                title: "FlipTextButton.css",
+                path: "FlipTextButton.css",
               },
             ],
           },
