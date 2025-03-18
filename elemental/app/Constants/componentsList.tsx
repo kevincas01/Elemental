@@ -38,6 +38,8 @@ import TabGlider from "../Components/UIGallery/TabsComponents/TabGlider";
 import FlipTextButton from "../Components/UIGallery/ButtonComponents/FlipTextButton";
 import InfiniteScrollingButton from "../Components/UIGallery/ButtonComponents/InfiniteScrollingButton";
 import SendButton from "../Components/UIGallery/ButtonComponents/SendButton";
+import BoxGridLoader from "../Components/UIGallery/LoaderComponents/BoxGridLoader";
+import HexagonPulseLoader from "../Components/UIGallery/LoaderComponents/HexagonPulseLoader";
 
 
 export interface listItem {
@@ -446,7 +448,50 @@ export const componentMappings: Record<
   loaders: {
     name: "Loaders",
     icon: <HourglassTopOutlinedIcon />,
-    elements: [],
+    elements: [
+      {
+        title: "Box Grid Loader",
+        component: <BoxGridLoader />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Css",
+            files: [
+              {
+                language: "javascript",
+                title: "BoxGridLoader.tsx",
+                path: "LoaderComponents/BoxGridLoader.tsx",
+              },
+              {
+                language: "css",
+                title: "BoxGridLoader.css",
+                path: "LoaderComponents/BoxGridLoader.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Hexagon Pulse Loader",
+        component: <HexagonPulseLoader />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Css",
+            files: [
+              {
+                language: "javascript",
+                title: "HexagonPulseLoader.tsx",
+                path: "LoaderComponents/HexagonPulseLoader.tsx",
+              },
+              {
+                language: "css",
+                title: "HexagonPulseLoader.css",
+                path: "LoaderComponents/HexagonPulseLoader.css",
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
   modals: { name: "Modals", icon: <RectangleIcon />, elements: [] },
   "navbars-menus": {
