@@ -37,6 +37,7 @@ import LightUpButton from "../Components/UIGallery/ButtonComponents/LightUpButto
 import TabGlider from "../Components/UIGallery/TabsComponents/TabGlider";
 import FlipTextButton from "../Components/UIGallery/ButtonComponents/FlipTextButton";
 import InfiniteScrollingButton from "../Components/UIGallery/ButtonComponents/InfiniteScrollingButton";
+import SendButton from "../Components/UIGallery/ButtonComponents/SendButton";
 
 
 export interface listItem {
@@ -263,6 +264,22 @@ export const componentMappings: Record<
                 language: "css",
                 title: "InfiniteScrollingButton.css",
                 path: "InfiniteScrollingButton.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Send Button",
+        component: <SendButton />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "SendButton.tsx",
+                path: "ButtonComponents/SendButton.tsx",
               },
             ],
           },
