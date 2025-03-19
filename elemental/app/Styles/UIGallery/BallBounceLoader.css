@@ -1,0 +1,46 @@
+.ball-bounce-loader {
+  position: relative;
+
+  height: 60px;
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(70, 70, 255);
+  border-radius: 50%;
+  animation: ballBounce 0.5s alternate infinite ease;
+}
+
+.ball:nth-child(1) {
+  left: 10px;
+}
+.ball:nth-child(2) {
+  left: 50px;
+  animation-delay: 270ms;
+}
+.ball:nth-child(3) {
+  left: 90px;
+  animation-delay: 540ms;
+}
+
+@keyframes ballBounce {
+  0% {
+    top: 50px;
+    height: 5px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0px;
+  }
+}
