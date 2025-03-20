@@ -41,6 +41,7 @@ import SendButton from "../Components/UIGallery/ButtonComponents/SendButton";
 import BoxGridLoader from "../Components/UIGallery/LoaderComponents/BoxGridLoader";
 import HexagonPulseLoader from "../Components/UIGallery/LoaderComponents/HexagonPulseLoader";
 import PendulumSwingLoader from "../Components/UIGallery/LoaderComponents/PendulumSwingLoader";
+import BarsLoader from "../Components/UIGallery/LoaderComponents/BarsLoader";
 
 
 export interface listItem {
@@ -508,6 +509,22 @@ export const componentMappings: Record<
                 language: "css",
                 title: "PendulumSwingLoader.css",
                 path: "PendulumSwingLoader.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Bars Loader",
+        component: <BarsLoader />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "BarsLoader.tsx",
+                path: "LoaderComponents/BarsLoader.tsx",
               },
             ],
           },
