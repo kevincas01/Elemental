@@ -1,0 +1,68 @@
+.pendulum-swing-loader {
+  position: relative;
+  height: 120px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 3px solid black;
+}
+
+.pendulum {
+  position: relative;
+  width: 20px; 
+  height: 100px;
+  transform-origin: top center; 
+
+}
+
+.pendulum-ball {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 70% 60%, white 10%, red 40%, darkred 100%);
+  border-radius: 50%;
+}
+
+.pendulum::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, #333, black);
+ 
+}
+
+.pendulum:nth-child(1) {
+  animation: swingLeft 2s ease-in-out infinite alternate;
+}
+
+.pendulum:nth-child(5) {
+  animation: swingRight 2s ease-in-out infinite ;
+}
+
+.pendulum:nth-child(2), 
+.pendulum:nth-child(4),
+.pendulum:nth-child(3) {
+  animation: slightSwing 2s  ease-in-out infinite alternate;
+  transform:rotate(0)
+}
+
+@keyframes swingRight {
+  0%,25%{ transform: rotate(2deg); }
+  50% { transform: rotate(-40deg); }
+  75%,100% { transform: rotate(2deg); }
+}
+@keyframes swingLeft {
+  0% { transform: rotate(40deg); }
+  25%, 50%, 75% { transform: rotate(-2deg); }
+  100% { transform: rotate(40deg); }
+}
+
+@keyframes slightSwing {
+  0%, 100% { transform: rotate(2deg); } 
+  50% { transform: rotate(-2deg); } 
+}
