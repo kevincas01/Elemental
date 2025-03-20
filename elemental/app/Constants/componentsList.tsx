@@ -40,6 +40,7 @@ import InfiniteScrollingButton from "../Components/UIGallery/ButtonComponents/In
 import SendButton from "../Components/UIGallery/ButtonComponents/SendButton";
 import BoxGridLoader from "../Components/UIGallery/LoaderComponents/BoxGridLoader";
 import HexagonPulseLoader from "../Components/UIGallery/LoaderComponents/HexagonPulseLoader";
+import PendulumSwingLoader from "../Components/UIGallery/LoaderComponents/PendulumSwingLoader";
 
 
 export interface listItem {
@@ -486,6 +487,27 @@ export const componentMappings: Record<
                 language: "css",
                 title: "HexagonPulseLoader.css",
                 path: "HexagonPulseLoader.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Pendulum Swing Loader",
+        component: <PendulumSwingLoader />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Css",
+            files: [
+              {
+                language: "javascript",
+                title: "PendulumSwingLoader.tsx",
+                path: "LoaderComponents/PendulumSwingLoader.tsx",
+              },
+              {
+                language: "css",
+                title: "PendulumSwingLoader.css",
+                path: "PendulumSwingLoader.css",
               },
             ],
           },
