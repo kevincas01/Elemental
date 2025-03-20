@@ -42,6 +42,7 @@ import BoxGridLoader from "../Components/UIGallery/LoaderComponents/BoxGridLoade
 import HexagonPulseLoader from "../Components/UIGallery/LoaderComponents/HexagonPulseLoader";
 import PendulumSwingLoader from "../Components/UIGallery/LoaderComponents/PendulumSwingLoader";
 import BarsLoader from "../Components/UIGallery/LoaderComponents/BarsLoader";
+import BallBounceLoader from "../Components/UIGallery/LoaderComponents/BallBounceLoader";
 
 
 export interface listItem {
@@ -525,6 +526,27 @@ export const componentMappings: Record<
                 language: "javascript",
                 title: "BarsLoader.tsx",
                 path: "LoaderComponents/BarsLoader.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Ball Bounce Loader",
+        component: <BallBounceLoader />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Css",
+            files: [
+              {
+                language: "javascript",
+                title: "BallBounceLoader.tsx",
+                path: "LoaderComponents/BallBounceLoader.tsx",
+              },
+              {
+                language: "css",
+                title: "BallBounceLoader.css",
+                path: "BallBounceLoader.css",
               },
             ],
           },
