@@ -6,6 +6,12 @@
   display: flex;
   justify-content: space-around;
 }
+.ball-bounce {
+  position: relative;
+  width: 20px;
+  height: 60px;
+  transform-origin: top center;
+}
 
 .ball {
   position: absolute;
@@ -16,18 +22,35 @@
   animation: ballBounce 0.5s alternate infinite ease;
 }
 
-.ball:nth-child(1) {
-  left: 10px;
-}
-.ball:nth-child(2) {
-  left: 50px;
+.ball-bounce:nth-child(2) .ball {
+
   animation-delay: 270ms;
 }
-.ball:nth-child(3) {
-  left: 90px;
+.ball-bounce:nth-child(3) .ball {
   animation-delay: 540ms;
 }
 
+.ball-bounce::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  transform-origin: 50%;
+  z-index: -1;
+  filter: blur(1px);
+  animation: shadowScale 0.5s alternate infinite ease;
+}
+
+.ball-bounce:nth-child(2)::after {
+  animation: shadowScale 0.5s 270ms alternate infinite ease;
+}
+.ball-bounce:nth-child(3)::after {
+  animation: shadowScale 0.5s 540ms alternate infinite ease;
+}
 @keyframes ballBounce {
   0% {
     top: 50px;
@@ -42,5 +65,21 @@
 
   100% {
     top: 0px;
+  }
+}
+
+@keyframes shadowScale {
+  0% {
+    transform: scaleX(1.8);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scaleX(0.5);
+    opacity: 0.4;
   }
 }
