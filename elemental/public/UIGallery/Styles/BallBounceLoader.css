@@ -17,13 +17,13 @@
   position: absolute;
   width: 20px;
   height: 20px;
+  z-index: 22;
   background-color: rgb(70, 70, 255);
   border-radius: 50%;
   animation: ballBounce 0.5s alternate infinite ease;
 }
 
 .ball-bounce:nth-child(2) .ball {
-
   animation-delay: 270ms;
 }
 .ball-bounce:nth-child(3) .ball {
@@ -40,7 +40,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
   transform-origin: 50%;
-  z-index: -1;
+  z-index: 20;
   filter: blur(1px);
   animation: shadowScale 0.5s alternate infinite ease;
 }
