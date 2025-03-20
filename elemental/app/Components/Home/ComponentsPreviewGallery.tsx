@@ -16,6 +16,8 @@ import BoxGridLoader from "../UIGallery/LoaderComponents/BoxGridLoader";
 import PendulumSwingLoader from "../UIGallery/LoaderComponents/PendulumSwingLoader";
 import FlipTextButton from "../UIGallery/ButtonComponents/FlipTextButton";
 import TabGlider from "../UIGallery/TabsComponents/TabGlider";
+import BarsLoader from "../UIGallery/LoaderComponents/BarsLoader";
+import InfiniteScrollingButton from "../UIGallery/ButtonComponents/InfiniteScrollingButton";
 
 const ComponentsPreviewGallery = () => {
   return (
@@ -42,7 +44,9 @@ const ComponentsPreviewGallery = () => {
         </GalleryComponent>
       </div>
       <div className="pl-[275px] grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
-        <div></div>
+        <GalleryComponent>
+          <BarsLoader />
+        </GalleryComponent>
         <GalleryComponent>
           <ZoomOutProfile />
         </GalleryComponent>
@@ -57,6 +61,9 @@ const ComponentsPreviewGallery = () => {
         </GalleryComponent>
         <GalleryComponent>
           <LinkExpandCircle />
+        </GalleryComponent>
+        <GalleryComponent>
+          <InfiniteScrollingButton />
         </GalleryComponent>
       </div>
       <div className="grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
@@ -74,7 +81,7 @@ const ComponentsPreviewGallery = () => {
           <BallBounceLoader />
         </GalleryComponent>
         <GalleryComponent>
-         <BoxGridLoader/>
+          <BoxGridLoader />
         </GalleryComponent>
         <GalleryComponent>
           <TabGlider />
