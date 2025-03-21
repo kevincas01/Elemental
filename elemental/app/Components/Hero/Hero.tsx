@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-10 w-full text-center max-w-[600px]">
+    <div className="flex flex-col gap-10 w-full justify-center items-center text-center max-w-[600px]">
       <h1 className="sm:text-7xl text-5xl">Explore Modern UI Components</h1>
       <p className="text-xl text-grayText">
         Browse through our showcase of UI components, including live demos and
