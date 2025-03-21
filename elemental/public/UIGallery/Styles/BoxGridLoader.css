@@ -1,6 +1,7 @@
-.loader {
+.box-grid-loader {
   width: 200px;
   height: 200px;
+  position: relative;
 }
 
 .box1,
