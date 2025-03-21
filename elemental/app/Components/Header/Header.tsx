@@ -33,7 +33,11 @@ const Header = () => {
       ref={headerRef}
       className={`fixed top-0 flex justify-between w-full px-5 h-[75px] items-center z-50 bg-lightBg dark:bg-darkBg`}
     >
-      <Link href={"/"} className="flex flex-col">
+      <Link
+        href={"/"}
+        className="flex flex-col"
+        onClick={() => setMobileToggled(false)}
+      >
         <RevealText text="Elemental" />
       </Link>
 
@@ -49,9 +53,12 @@ const Header = () => {
           mobileToggled ? "h-fit p-5" : "h-0"
         } w-full sm:w-fit overflow-hidden sm:p-0 flex sm:flex-row flex-col bg-lightBg dark:bg-darkBg sm:bg-transparent top-[75px] sm:top-0 left-0 sm:flex gap-2 items-center text-sm sm:text-lg transition-[height] duration-1000`}
       >
-        <Link href={"/components"}>Components</Link>
+        <Link href={"/components"} onClick={() => setMobileToggled(false)}>
+          Components
+        </Link>
         <Link
           href={"/components"}
+          onClick={() => setMobileToggled(false)}
           className="rounded-xl border border-solid border-transparent transition-colors flex items-center justify-center bg-darkBg text-darkTextContrast dark:bg-lightBg dark:text-lightTextContrast gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] h-10 px-4 sm:px-5"
         >
           Get Started
