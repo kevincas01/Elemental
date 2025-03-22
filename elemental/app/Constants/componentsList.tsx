@@ -43,6 +43,7 @@ import HexagonPulseLoader from "../Components/UIGallery/LoaderComponents/Hexagon
 import PendulumSwingLoader from "../Components/UIGallery/LoaderComponents/PendulumSwingLoader";
 import BarsLoader from "../Components/UIGallery/LoaderComponents/BarsLoader";
 import BallBounceLoader from "../Components/UIGallery/LoaderComponents/BallBounceLoader";
+import LoadingTextBounce from "../Components/UIGallery/LoaderComponents/LoadingTextBounce";
 
 
 export interface listItem {
@@ -547,6 +548,27 @@ export const componentMappings: Record<
                 language: "css",
                 title: "BallBounceLoader.css",
                 path: "BallBounceLoader.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Loading Text Bounce",
+        component: <LoadingTextBounce />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Css",
+            files: [
+              {
+                language: "javascript",
+                title: "LoadingTextBounce.tsx",
+                path: "LoaderComponents/LoadingTextBounce.tsx",
+              },
+              {
+                language: "css",
+                title: "LoadingTextBounce.css",
+                path: "LoadingTextBounce.css",
               },
             ],
           },
