@@ -1,18 +1,30 @@
 .pendulum-swing-loader {
   position: relative;
-  height: 120px;
-  width: 100px;
+  height: 140px;
+  width: 150px;
   display: flex;
-  justify-content: space-around;
-  border-top: 3px solid black;
+  justify-content: center;
+  border: 3px solid black;
+  border-bottom: 0;
+
+  border-radius: 20px 20px 0px 0px;
+}
+
+.pendulum-swing-loader::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 180px;
+  height: 30px;
+  background-color: black;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .pendulum {
   position: relative;
-  width: 20px; 
+  width: 20px;
   height: 100px;
-  transform-origin: top center; 
-
+  transform-origin: top center;
 }
 
 .pendulum-ball {
@@ -20,7 +32,12 @@
   bottom: 0;
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle at 70% 60%, white 10%, red 40%, darkred 100%);
+  background: radial-gradient(
+    circle at 70% 60%,
+    white 10%,
+    red 40%,
+    darkred 100%
+  );
   border-radius: 50%;
 }
 
@@ -33,7 +50,6 @@
   width: 2px;
   height: 100px;
   background: linear-gradient(to bottom, #333, black);
- 
 }
 
 .pendulum:nth-child(1) {
@@ -41,28 +57,49 @@
 }
 
 .pendulum:nth-child(5) {
-  animation: swingRight 2s ease-in-out infinite ;
+  animation: swingRight 2s ease-in-out infinite;
 }
 
-.pendulum:nth-child(2), 
+.pendulum:nth-child(2),
 .pendulum:nth-child(4),
 .pendulum:nth-child(3) {
-  animation: slightSwing 2s  ease-in-out infinite alternate;
-  transform:rotate(0)
+  animation: slightSwing 2s ease-in-out infinite alternate;
+  transform: rotate(0);
 }
 
 @keyframes swingRight {
-  0%,25%{ transform: rotate(2deg); }
-  50% { transform: rotate(-40deg); }
-  75%,100% { transform: rotate(2deg); }
+  0%,
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  75%,
+  100% {
+    transform: rotate(2deg);
+  }
 }
 @keyframes swingLeft {
-  0% { transform: rotate(40deg); }
-  25%, 50%, 75% { transform: rotate(-2deg); }
-  100% { transform: rotate(40deg); }
+  0% {
+    transform: rotate(40deg);
+  }
+  25%,
+  50%,
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
 }
 
 @keyframes slightSwing {
-  0%, 100% { transform: rotate(2deg); } 
-  50% { transform: rotate(-2deg); } 
+  0%,
+  100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
 }
