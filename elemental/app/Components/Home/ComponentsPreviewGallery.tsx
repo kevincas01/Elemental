@@ -22,7 +22,7 @@ import InfiniteScrollingButton from "../UIGallery/ButtonComponents/InfiniteScrol
 const ComponentsPreviewGallery = () => {
   return (
     <div className="w-full overflow-hidden flex flex-col items-center justify-center gap-4">
-      <div className="grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
+      <div className="grid-cols-[repeat(8,200px)] max-h-fit md:grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
         <div></div>
         <GalleryComponent>
           <SlidingText />
@@ -43,7 +43,7 @@ const ComponentsPreviewGallery = () => {
           <FlipCard />
         </GalleryComponent>
       </div>
-      <div className="pl-[275px] grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
+      <div className="pl-[275px] grid-cols-[repeat(8,200px)] md:grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
         <GalleryComponent>
           <BarsLoader />
         </GalleryComponent>
@@ -66,7 +66,7 @@ const ComponentsPreviewGallery = () => {
           <InfiniteScrollingButton />
         </GalleryComponent>
       </div>
-      <div className="grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
+      <div className="grid-cols-[repeat(8,200px)] h-fit md:grid-cols-[repeat(8,_275px)] grid gap-4 overflow-visible">
         <div></div>
         <GalleryComponent>
           <FlipTextButton />
@@ -95,8 +95,8 @@ const ComponentsPreviewGallery = () => {
 
 const GalleryComponent = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="p-4 bg-lightSecondaryBg dark:bg-darkSecondaryBg rounded-lg flex flex-col justify-center items-center ">
-      {children}
+    <div className="p-4 bg-lightSecondaryBg dark:bg-darkSecondaryBg min-h-fit rounded-lg flex flex-col justify-center items-center">
+      <div className="scale-50 md:scale-100 ">{children}</div>
     </div>
   );
 };
