@@ -45,6 +45,7 @@ import BarsLoader from "../Components/UIGallery/LoaderComponents/BarsLoader";
 import BallBounceLoader from "../Components/UIGallery/LoaderComponents/BallBounceLoader";
 import LoadingTextBounce from "../Components/UIGallery/LoaderComponents/LoadingTextBounce";
 import LabelShiftInput from "../Components/UIGallery/InputComponents/LabelShiftInput";
+import ExpandableInput from "../Components/UIGallery/InputComponents/ExpandableInput";
 
 export interface listItem {
   name: string;
@@ -463,6 +464,22 @@ export const componentMappings: Record<
                 language: "javascript",
                 title: "LabelShiftInput.tsx",
                 path: "InputComponents/LabelShiftInput.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Expandable Input",
+        component: <ExpandableInput />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "ExpandableInput.tsx",
+                path: "InputComponents/ExpandableInput.tsx",
               },
             ],
           },
