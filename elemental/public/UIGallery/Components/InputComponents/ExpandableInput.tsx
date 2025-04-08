@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
