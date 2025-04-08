@@ -44,7 +44,7 @@ import PendulumSwingLoader from "../Components/UIGallery/LoaderComponents/Pendul
 import BarsLoader from "../Components/UIGallery/LoaderComponents/BarsLoader";
 import BallBounceLoader from "../Components/UIGallery/LoaderComponents/BallBounceLoader";
 import LoadingTextBounce from "../Components/UIGallery/LoaderComponents/LoadingTextBounce";
-
+import LabelShiftInput from "../Components/UIGallery/InputComponents/LabelShiftInput";
 
 export interface listItem {
   name: string;
@@ -448,7 +448,28 @@ export const componentMappings: Record<
     icon: <AutoAwesomeMosaicOutlinedIcon />,
     elements: [],
   },
-  inputs: { name: "Inputs", icon: <EditNoteOutlinedIcon />, elements: [] },
+  inputs: {
+    name: "Inputs",
+    icon: <EditNoteOutlinedIcon />,
+    elements: [
+      {
+        title: "Label Shift Input",
+        component: <LabelShiftInput />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Tailwind",
+            files: [
+              {
+                language: "javascript",
+                title: "LabelShiftInput.tsx",
+                path: "InputComponents/LabelShiftInput.tsx",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
   loaders: {
     name: "Loaders",
     icon: <HourglassTopOutlinedIcon />,
@@ -647,7 +668,6 @@ export const componentMappings: Record<
       },
     ],
   },
-  
   text: {
     name: "Text",
     icon: <TextFieldsIcon />,
