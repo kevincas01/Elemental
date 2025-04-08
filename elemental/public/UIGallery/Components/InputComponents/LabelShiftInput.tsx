@@ -1,3 +1,4 @@
+"use client";
 import React, { ChangeEvent, FocusEvent, useRef, useState } from "react";
 
 const LabelShiftInput = () => {
