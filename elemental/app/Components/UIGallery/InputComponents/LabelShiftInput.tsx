@@ -25,7 +25,7 @@ const LabelShiftInput = () => {
     (isFocused || hasValue ? " top-0  text-sm" : " top-1/2 ");
 
   return (
-    <div className="flex flex-col relative mt-8 bg-white text-red-400">
+    <div className="flex flex-col relative mt-8 bg-white text-red-400 rounded-sm">
       <label
         htmlFor="username"
         onClick={handleLabelClick}
