@@ -21,17 +21,17 @@ const LabelShiftInput = () => {
   };
 
   const labelClasses =
-    "cursor-text text-lg absolute left-4 transition-all duration-300 bg-white px-1 -translate-y-1/2" +
+    "cursor-text text-lg absolute left-4 transition-all duration-300 bg-white px-1 -translate-y-1/2 rounded-sm" +
     (isFocused || hasValue ? " top-0  text-sm" : " top-1/2 ");
 
   return (
-    <div className="flex flex-col relative mt-8">
+    <div className="flex flex-col relative mt-8 bg-white text-red-400">
       <label
         htmlFor="username"
         onClick={handleLabelClick}
         className={labelClasses}
       >
-        Username
+        Email
       </label>
       <input
         id="username"
@@ -39,7 +39,7 @@ const LabelShiftInput = () => {
         type="text"
         name="username"
         required
-        className="border-2 border-red-300 focus:border-main focus:outline-none p-2 rounded-md"
+        className="border-2 border-red-300 focus:border-main focus:outline-none p-2 rounded-sm"
         onFocus={handleFocus}
         onBlur={handleBlur}
         onChange={handleChange}
