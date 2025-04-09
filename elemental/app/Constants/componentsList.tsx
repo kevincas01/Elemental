@@ -46,6 +46,7 @@ import BallBounceLoader from "../Components/UIGallery/LoaderComponents/BallBounc
 import LoadingTextBounce from "../Components/UIGallery/LoaderComponents/LoadingTextBounce";
 import LabelShiftInput from "../Components/UIGallery/InputComponents/LabelShiftInput";
 import ExpandableInput from "../Components/UIGallery/InputComponents/ExpandableInput";
+import BallBounceStep from "../Components/UIGallery/LoaderComponents/BallBounceStep";
 
 export interface listItem {
   name: string;
@@ -586,6 +587,27 @@ export const componentMappings: Record<
                 language: "css",
                 title: "BallBounceLoader.css",
                 path: "BallBounceLoader.css",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Ball Bounce Step Loader",
+        component: <BallBounceStep />,
+        fileGroups: [
+          {
+            filegroup: "Typescript/Css",
+            files: [
+              {
+                language: "javascript",
+                title: "BallBounceStep.tsx",
+                path: "LoaderComponents/BallBounceStep.tsx",
+              },
+              {
+                language: "css",
+                title: "BallBounceStep.css",
+                path: "BallBounceStep.css",
               },
             ],
           },
