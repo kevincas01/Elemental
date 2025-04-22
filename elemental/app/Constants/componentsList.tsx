@@ -18,35 +18,7 @@ import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
 import AutoAwesomeMotionOutlinedIcon from "@mui/icons-material/AutoAwesomeMotionOutlined";
 import TextFieldsIcon from "@mui/icons-material/TextFields";
 import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
-import BubbleCard from "../Components/UIGallery/CardComponents/BubbleCard";
-import FlipCard from "../Components/UIGallery/CardComponents/FlipCard";
-import LinksHoverCard from "../Components/UIGallery/CardComponents/LinksHoverCard";
-import { SlidingTabSelector } from "../Components/UIGallery/TabsComponents/SlidingTabSelector";
-import RevealText from "../Components/UIGallery/TextComponents/RevealText";
-import SlidingText from "../Components/UIGallery/TextComponents/SlidingText";
-import LiftButton from "../Components/UIGallery/ButtonComponents/LiftButton";
-import WetPaintButton from "../Components/UIGallery/ButtonComponents/WetPaintButton";
-import LinksRevealCard from "../Components/UIGallery/CardComponents/LinksRevealCard";
-import Envelope from "../Components/UIGallery/CardComponents/Envelope";
 import { FileGroup } from "../Types/files";
-import ZoomOutProfile from "../Components/UIGallery/CardComponents/ZoomOutProfile";
-import ToggleDarkSwitch from "../Components/UIGallery/ToggleComponents/ToggleDarkSwitch";
-import LinkExpandCircle from "../Components/UIGallery/OtherComponents/LinkExpandCircle";
-import SpinCarousel3d from "../Components/UIGallery/CarouselComponents/SpinCarousel3d";
-import LightUpButton from "../Components/UIGallery/ButtonComponents/LightUpButton";
-import TabGlider from "../Components/UIGallery/TabsComponents/TabGlider";
-import FlipTextButton from "../Components/UIGallery/ButtonComponents/FlipTextButton";
-import InfiniteScrollingButton from "../Components/UIGallery/ButtonComponents/InfiniteScrollingButton";
-import SendButton from "../Components/UIGallery/ButtonComponents/SendButton";
-import BoxGridLoader from "../Components/UIGallery/LoaderComponents/BoxGridLoader";
-import HexagonPulseLoader from "../Components/UIGallery/LoaderComponents/HexagonPulseLoader";
-import PendulumSwingLoader from "../Components/UIGallery/LoaderComponents/PendulumSwingLoader";
-import BarsLoader from "../Components/UIGallery/LoaderComponents/BarsLoader";
-import BallBounceLoader from "../Components/UIGallery/LoaderComponents/BallBounceLoader";
-import LoadingTextBounce from "../Components/UIGallery/LoaderComponents/LoadingTextBounce";
-import LabelShiftInput from "../Components/UIGallery/InputComponents/LabelShiftInput";
-import ExpandableInput from "../Components/UIGallery/InputComponents/ExpandableInput";
-import BallBounceStep from "../Components/UIGallery/LoaderComponents/BallBounceStep";
 
 export interface listItem {
   name: string;
@@ -155,7 +127,7 @@ export const componentMappings: Record<
     icon: React.ReactNode;
     elements: {
       title: string;
-      component: React.ReactNode;
+      componentPath?: string;
       fileGroups: FileGroup[];
     }[];
   }
@@ -184,7 +156,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Lift Button",
-        component: <LiftButton />,
+        componentPath: "ButtonComponents/LiftButton.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -200,7 +172,7 @@ export const componentMappings: Record<
       },
       {
         title: "Wet Paint Button",
-        component: <WetPaintButton />,
+        componentPath: "ButtonComponents/WetPaintButton.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -216,7 +188,7 @@ export const componentMappings: Record<
       },
       {
         title: "Light Up Button",
-        component: <LightUpButton />,
+        componentPath: "ButtonComponents/LightUpButton.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/CSS",
@@ -237,7 +209,7 @@ export const componentMappings: Record<
       },
       {
         title: "Flip Text Button",
-        component: <FlipTextButton />,
+        componentPath: "ButtonComponents/FlipTextButton.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/CSS",
@@ -258,7 +230,7 @@ export const componentMappings: Record<
       },
       {
         title: "Infinite Scrolling Button",
-        component: <InfiniteScrollingButton />,
+        componentPath: "ButtonComponents/InfiniteScrollingButton.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/CSS",
@@ -279,7 +251,7 @@ export const componentMappings: Record<
       },
       {
         title: "Send Button",
-        component: <SendButton />,
+        componentPath: "ButtonComponents/SendButton.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -301,7 +273,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Links Hover Card",
-        component: <LinksHoverCard />,
+        componentPath: "CardComponents/LinksHoverCard.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/CSS",
@@ -322,7 +294,7 @@ export const componentMappings: Record<
       },
       {
         title: "Links Reveal Card",
-        component: <LinksRevealCard />,
+        componentPath: "CardComponents/LinksRevealCard.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/CSS",
@@ -343,7 +315,7 @@ export const componentMappings: Record<
       },
       {
         title: "Bubble Card",
-        component: <BubbleCard />,
+        componentPath: "CardComponents/BubbleCard.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -359,7 +331,7 @@ export const componentMappings: Record<
       },
       {
         title: "Flip Card",
-        component: <FlipCard />,
+        componentPath: "CardComponents/FlipCard.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -376,7 +348,7 @@ export const componentMappings: Record<
 
       {
         title: "Envelope Card",
-        component: <Envelope />,
+        componentPath: "CardComponents/Envelope.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/CSS",
@@ -397,7 +369,7 @@ export const componentMappings: Record<
       },
       {
         title: "Zoom Out Profile Card",
-        component: <ZoomOutProfile />,
+        componentPath: "CardComponents/ZoomOutProfile.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -419,7 +391,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Spin Carousel 3D",
-        component: <SpinCarousel3d />,
+        componentPath: "CarouselComponents/SpinCarousel3d.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/CSS",
@@ -456,7 +428,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Label Shift Input",
-        component: <LabelShiftInput />,
+        componentPath: "InputComponents/LabelShiftInput.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -472,7 +444,7 @@ export const componentMappings: Record<
       },
       {
         title: "Expandable Input",
-        component: <ExpandableInput />,
+        componentPath: "InputComponents/ExpandableInput.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -494,7 +466,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Box Grid Loader",
-        component: <BoxGridLoader />,
+        componentPath: "LoaderComponents/BoxGridLoader.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Css",
@@ -515,7 +487,7 @@ export const componentMappings: Record<
       },
       {
         title: "Hexagon Pulse Loader",
-        component: <HexagonPulseLoader />,
+        componentPath: "LoaderComponents/HexagonPulseLoader.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Css",
@@ -536,7 +508,7 @@ export const componentMappings: Record<
       },
       {
         title: "Pendulum Swing Loader",
-        component: <PendulumSwingLoader />,
+        componentPath: "LoaderComponents/PendulumSwingLoader.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Css",
@@ -557,7 +529,7 @@ export const componentMappings: Record<
       },
       {
         title: "Bars Loader",
-        component: <BarsLoader />,
+        componentPath: "LoaderComponents/BarsLoader.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -573,7 +545,8 @@ export const componentMappings: Record<
       },
       {
         title: "Ball Bounce Loader",
-        component: <BallBounceLoader />,
+        componentPath: "LoaderComponents/BallBounceLoader.tsx",
+
         fileGroups: [
           {
             filegroup: "Typescript/Css",
@@ -594,7 +567,7 @@ export const componentMappings: Record<
       },
       {
         title: "Ball Bounce Step Loader",
-        component: <BallBounceStep />,
+        componentPath: "LoaderComponents/BallBounceStep.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Css",
@@ -615,7 +588,8 @@ export const componentMappings: Record<
       },
       {
         title: "Loading Text Bounce",
-        component: <LoadingTextBounce />,
+        componentPath: "LoaderComponents/LoadingTextBounce.tsx",
+
         fileGroups: [
           {
             filegroup: "Typescript/Css",
@@ -648,7 +622,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Link Expand Circle",
-        component: <LinkExpandCircle />,
+        componentPath: "OtherComponents/LinkExpandCircle.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -670,7 +644,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Sliding Tabs Selector",
-        component: <SlidingTabSelector />,
+        componentPath: "TabsComponents/SlidingTabSelector.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -686,7 +660,7 @@ export const componentMappings: Record<
       },
       {
         title: "Tab Glider",
-        component: <TabGlider />,
+        componentPath: "TabsComponents/TabGlider.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/CSS",
@@ -713,7 +687,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Slide Mask Reveal Text",
-        component: <RevealText text="Elemental" />,
+        componentPath: "TextComponents/RevealText.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -729,7 +703,7 @@ export const componentMappings: Record<
       },
       {
         title: "Sliding Text",
-        component: <SlidingText />,
+        componentPath: "TextComponents/SlidingText.tsx",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",
@@ -757,7 +731,7 @@ export const componentMappings: Record<
     elements: [
       {
         title: "Toggle Dark Switch",
-        component: <ToggleDarkSwitch />,
+        componentPath: "ToggleComponents/ToggleDarkSwitch",
         fileGroups: [
           {
             filegroup: "Typescript/Tailwind",

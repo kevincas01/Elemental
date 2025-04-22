@@ -17,17 +17,28 @@ export default async function Page({ params }: PageProps) {
   }
 
   // Add file contents to each element
-  const elementsWithFiles = component.elements.map((element) => ({
-    ...element,
-    fileGroups: element.fileGroups.map((group) => ({
-      ...group,
-      files: group.files.map((file) => ({
-        ...file,
-        content: getFileContent(file.path, file.language),
-      })),
-    })),
-  }));
-
+  const elementsWithFiles = await Promise.all(
+    component.elements.map(async (element) => {
+      const Component = (await import(`@/app/Components/UIGallery/${element.componentPath}`)).default;
+  
+      return {
+        ...element,
+        component: <Component />,
+        fileGroups: await Promise.all(
+          element.fileGroups.map(async (group) => ({
+            ...group,
+            files: await Promise.all(
+              group.files.map(async (file) => ({
+                ...file,
+                content: await getFileContent(file.path, file.language),
+              }))
+            ),
+          }))
+        ),
+      };
+    })
+  );
+  
   return (
     <div className="h-full flex flex-col">
       <div className="flex text-grayText">

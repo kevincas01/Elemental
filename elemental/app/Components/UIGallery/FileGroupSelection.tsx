@@ -1,3 +1,5 @@
+
+'use client'
 import { useState, useRef, useEffect, SetStateAction, Dispatch } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { FileGroup } from "@/app/Types/files";
