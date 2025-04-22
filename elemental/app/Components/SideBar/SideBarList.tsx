@@ -11,6 +11,7 @@ const SideBarList = ({ list, pathname }: SideBarListProps) => {
     <div className="flex flex-col gap-1 ">
       {list.map((listItem) => (
         <Link
+          prefetch={false}
           key={listItem.name}
           href={listItem.url}
           className={`${
