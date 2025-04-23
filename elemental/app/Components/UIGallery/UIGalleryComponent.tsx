@@ -7,10 +7,12 @@ import UITabSelection from "./UITabSelection";
 import FileGroupSelection from "./FileGroupSelection";
 import FileSelection from "./FileSelection";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import LibraryAddCheckOutlinedIcon from '@mui/icons-material/LibraryAddCheckOutlined';
+
 interface UIGalleryComponentProps {
   title: string;
   children: React.ReactNode;
-  fileGroups?: FileGroup[];
+  fileGroups: FileGroup[];
 }
 
 const UIGalleryComponent = ({
@@ -19,13 +21,18 @@ const UIGalleryComponent = ({
   fileGroups,
 }: UIGalleryComponentProps) => {
   const [activeTab, setActiveTab] = useState<"view" | "code">("view");
-  const [selectedGroupIndex, setSelectedGroupIndex] = useState(0);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedFileGroupIndex, setSelectedFileGroupIndex] = useState(0);
+  const [selectedFileIndex, setSelectedFileIndex] = useState(0);
 
+  const [copiedFileText, setCopiedFileText] = useState(false);
+
+  const selectedFile =
+    fileGroups[selectedFileGroupIndex].files[selectedFileIndex];
   useEffect(() => {
     if (!fileGroups) return;
-    setSelectedFile(fileGroups[selectedGroupIndex].files[0]);
-  }, [selectedGroupIndex]);
+
+    setSelectedFileIndex(0);
+  }, [selectedFileGroupIndex]);
 
   const syntaxTheme = anOldHope;
 
@@ -37,6 +44,17 @@ const UIGalleryComponent = ({
       padding: "0",
       color: "#6b7280",
     },
+  };
+
+  const copyToClipboard = () => {
+    const contentToCopy = selectedFile.content;
+    if (contentToCopy) {
+      navigator.clipboard.writeText(contentToCopy);
+      setCopiedFileText(true);
+      setTimeout(() => {
+        setCopiedFileText(false);
+      }, 2000);
+    }
   };
 
   return (
@@ -58,17 +76,17 @@ const UIGalleryComponent = ({
           {fileGroups && fileGroups.length > 0 && (
             <div className=" w-full bg-lightBg dark:bg-darkSecondaryBg relative border dark:border-darkBgBorder">
               <div className="flex justify-between text-lightTextContrast dark:text-darkTextContrast bg-lightBg dark:border-b-darkBgBorder dark:bg-darkSecondaryBg border-b items-center pr-2">
-                {fileGroups[selectedGroupIndex].files.length > 0 && (
+                {fileGroups[selectedFileGroupIndex].files.length > 0 && (
                   <FileSelection
-                    selectedGroupIndex={selectedGroupIndex}
-                    selectedFile={selectedFile}
-                    setSelectedFile={setSelectedFile}
+                    selectedFileGroupIndex={selectedFileGroupIndex}
+                    selectedFileIndex={selectedFileIndex}
+                    setSelectedFileIndex={setSelectedFileIndex}
                     fileGroups={fileGroups}
                   />
                 )}
                 <FileGroupSelection
-                  selectedGroupIndex={selectedGroupIndex}
-                  setSelectedGroupIndex={setSelectedGroupIndex}
+                  selectedFileGroupIndex={selectedFileGroupIndex}
+                  setSelectedFileGroupIndex={setSelectedFileGroupIndex}
                   fileGroups={fileGroups}
                 />
               </div>
@@ -90,8 +108,11 @@ const UIGalleryComponent = ({
                   </SyntaxHighlighter>
                 )}
               </div>
-              <div className="absolute bottom-4 right-4 cursor-pointer bg-gray-100 dark:bg-gray-700 p-2 rounded-full">
-                <ContentCopyIcon />
+              <div
+                onClick={copyToClipboard}
+                className="absolute bottom-4 right-4 cursor-pointer bg-gray-100 dark:bg-gray-700 p-2 rounded-full"
+              >
+                {copiedFileText ? <LibraryAddCheckOutlinedIcon /> : <ContentCopyIcon />}
               </div>
             </div>
           )}
