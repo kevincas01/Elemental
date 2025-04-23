@@ -4,13 +4,13 @@ import { useState, useRef, useEffect, SetStateAction, Dispatch } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { FileGroup } from "@/app/Types/files";
 interface FileGroupSelectionProps {
-  selectedGroupIndex: number;
-  setSelectedGroupIndex: Dispatch<SetStateAction<number>>;
+  selectedFileGroupIndex: number;
+  setSelectedFileGroupIndex: Dispatch<SetStateAction<number>>;
   fileGroups: FileGroup[];
 }
 const FileGroupSelection = ({
-  selectedGroupIndex,
-  setSelectedGroupIndex,
+  selectedFileGroupIndex,
+  setSelectedFileGroupIndex,
   fileGroups,
 }: FileGroupSelectionProps) => {
   const [showFileGroupSelection, setShowFileGroupSelection] = useState(false);
@@ -37,7 +37,7 @@ const FileGroupSelection = ({
         className="flex justify-between items-center cursor-pointer border dark:border-darkBgBorder px-2 py-1 text-sm"
         onClick={() => setShowFileGroupSelection(!showFileGroupSelection)}
       >
-        {fileGroups[selectedGroupIndex].filegroup}
+        {fileGroups[selectedFileGroupIndex].filegroup}
         <ArrowDropDownIcon />
       </div>
 
@@ -51,9 +51,9 @@ const FileGroupSelection = ({
               <input
                 type="radio"
                 value={index}
-                checked={selectedGroupIndex === index}
+                checked={selectedFileGroupIndex === index}
                 onChange={() => {
-                  setSelectedGroupIndex(index);
+                  setSelectedFileGroupIndex(index);
                   setShowFileGroupSelection(false);
                 }}
                 className="hidden"
