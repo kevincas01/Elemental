@@ -1,4 +1,4 @@
-import { File, FileGroup } from "@/app/Types/files";
+import { FileGroup } from "@/app/Types/files";
 import React, { Dispatch, SetStateAction } from "react";
 interface FileSelectionProps {
   selectedFileGroupIndex: number;

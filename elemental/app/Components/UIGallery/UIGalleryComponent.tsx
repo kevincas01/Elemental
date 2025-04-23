@@ -1,5 +1,5 @@
 "use client";
-import { File, FileGroup } from "@/app/Types/files";
+import { FileGroup } from "@/app/Types/files";
 import React, { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
