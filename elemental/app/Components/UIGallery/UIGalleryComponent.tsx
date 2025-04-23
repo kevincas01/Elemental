@@ -6,6 +6,7 @@ import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import UITabSelection from "./UITabSelection";
 import FileGroupSelection from "./FileGroupSelection";
 import FileSelection from "./FileSelection";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 interface UIGalleryComponentProps {
   title: string;
   children: React.ReactNode;
@@ -41,7 +42,9 @@ const UIGalleryComponent = ({
   return (
     <div className="flex flex-col gap-2">
       <div className="flex justify-between items-center">
-        <h2 className="md:text-3xl text-lg font-semibold leading-none">{title}</h2>
+        <h2 className="md:text-3xl text-lg font-semibold leading-none">
+          {title}
+        </h2>
         <UITabSelection activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
@@ -53,8 +56,8 @@ const UIGalleryComponent = ({
         <>
           {/* Code Display */}
           {fileGroups && fileGroups.length > 0 && (
-            <div className="max-h-[500px] w-full overflow-auto no-scrollbar bg-lightBg dark:bg-darkSecondaryBg relative border dark:border-darkBgBorder">
-              <div className="sticky top-0 flex justify-between text-lightTextContrast dark:text-darkTextContrast bg-lightBg dark:border-b-darkBgBorder dark:bg-darkSecondaryBg border-b items-center pr-2">
+            <div className=" w-full bg-lightBg dark:bg-darkSecondaryBg relative border dark:border-darkBgBorder">
+              <div className="flex justify-between text-lightTextContrast dark:text-darkTextContrast bg-lightBg dark:border-b-darkBgBorder dark:bg-darkSecondaryBg border-b items-center pr-2">
                 {fileGroups[selectedGroupIndex].files.length > 0 && (
                   <FileSelection
                     selectedGroupIndex={selectedGroupIndex}
@@ -70,21 +73,26 @@ const UIGalleryComponent = ({
                 />
               </div>
 
-              {/* Code Display */}
-              {selectedFile && (
-                <SyntaxHighlighter
-                  language={selectedFile.language || "javascript"}
-                  showLineNumbers
-                  className={"no-scrollbar"}
-                  style={modifiedTheme}
-                  lineNumberStyle={{
-                    justifyContent: "start",
-                    paddingLeft: "5px",
-                  }}
-                >
-                  {selectedFile.content || "// No content available"}
-                </SyntaxHighlighter>
-              )}
+              <div className="max-h-[500px] overflow-auto no-scrollbar py-2 ">
+                {/* Code Display */}
+                {selectedFile && (
+                  <SyntaxHighlighter
+                    language={selectedFile.language || "javascript"}
+                    showLineNumbers
+                    className={"no-scrollbar"}
+                    style={modifiedTheme}
+                    lineNumberStyle={{
+                      justifyContent: "start",
+                      paddingLeft: "5px",
+                    }}
+                  >
+                    {selectedFile.content || "// No content available"}
+                  </SyntaxHighlighter>
+                )}
+              </div>
+              <div className="absolute bottom-4 right-4 cursor-pointer bg-gray-100 dark:bg-gray-700 p-2 rounded-full">
+                <ContentCopyIcon />
+              </div>
             </div>
           )}
         </>
