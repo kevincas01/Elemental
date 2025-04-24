@@ -8,6 +8,12 @@ interface PageProps {
   params: Promise<{ component_name: string }>;
 }
 
+export async function generateStaticParams() {
+  return Object.keys(componentMappings).map(component_name => ({
+    component_name,
+  }));
+}
+
 export default async function Page({ params }: PageProps) {
   const componentName = (await params).component_name;
   const component = componentMappings[componentName];
