@@ -7,9 +7,9 @@ type Position = {
   left: number;
   width: number;
   opacity: number;
-};
+}
 
-export const SlidingTabSelector = () => (
+const SlidingTabSelector = () => (
   <div className="h-48 w-full flex flex-col justify-center items-center">
     <SlideTabs />
   </div>
@@ -71,3 +71,5 @@ const Cursor = ({ position }: { position: Position }) => (
     }}
   />
 );
+
+export default  SlidingTabSelector
