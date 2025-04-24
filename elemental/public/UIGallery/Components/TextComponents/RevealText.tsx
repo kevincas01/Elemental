@@ -1,6 +1,6 @@
 import React from "react";
 
-const RevealText = ({ text }: { text: string }) => {
+const RevealText = ({ text="Elemental" }: { text?: string }) => {
   return (
     <span className="group font-extrabold text-3xl text-primary relative button uppercase tracking-wider">
       <span className="text-transparent dark:[-webkit-text-stroke:1px_var(--dark-text-contrast)] [-webkit-text-stroke:1px_var(--light-text-contrast)]">
