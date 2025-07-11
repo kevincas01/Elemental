@@ -149,6 +149,21 @@ export const componentMappings: Record<
     name: "Accordions",
     icon: <KeyboardDoubleArrowDownOutlinedIcon />,
     elements: [{
+      title: "Horizontal Accordion",
+      componentPath: "AccordionComponents/HorizontalAccordion.tsx",
+      fileGroups: [
+        {
+          filegroup: "Typescript/Tailwind",
+          files: [
+            {
+              language: "javascript",
+              title: "HorizontalAccordion.tsx",
+              path: "AccordionComponents/HorizontalAccordion.tsx",
+            },
+          ],
+        },
+      ],
+    },{
       title: "Dropdown Accordion",
       componentPath: "AccordionComponents/DropdownAccordion.tsx",
       fileGroups: [
