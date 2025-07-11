@@ -29,8 +29,8 @@ const HorizontalAccordion = () => {
         <h2 className="main-title ">What We Stand For</h2>
         <p className="subtitle mb-10">
           Behind every solution we build is a set of core principles that guide
-          how we work and who we work with. These aren't just buzzwords —
-          they're the foundation of our partnerships, our process, and our
+          how we work and who we work with. These aren&rsquo;t just buzzwords —
+          they&rsquo;re the foundation of our partnerships, our process, and our
           product.
         </p>
 
@@ -45,7 +45,7 @@ const HorizontalAccordion = () => {
                 className={clsx(
                   "transition-all  duration-400 ease-in-out border sm:h-96 relative w-full overflow-hidden",
                   isActive
-                    ? "sm:flex-5 h-100 p-4 bg-primary-light"
+                    ? "sm:flex-5 h-100 p-4 bg-purple-300"
                     : "sm:flex-1 h-32 p-4 cursor-pointer",
                   index === values.length - 1
                     ? "border-b sm:border-r border-gray-500"
