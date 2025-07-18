@@ -21,11 +21,11 @@ const FAQList = [
 
 const DropdownAccordion = () => {
   return (
-    <div className="bg-white p-5">
+    <div className="bg-white p-5 max-w-150">
       <div className="w-full flex flex-col justify-center items-center ">
         <h2>Frequently Asked Questions</h2>
       </div>
-      <div className=" flex flex-col gap-5 mt-4">
+      <div className="flex flex-col gap-5 mt-4">
         {FAQList.map((faq) => (
           <AccordionItem
             key={faq.title}
@@ -50,7 +50,7 @@ const AccordionItem = ({ title, description }: AccordionItemProps) => {
     setItemToggled((prev) => !prev);
   };
   return (
-    <div className="rounded-md shadow-[0_1px_4px_rgba(0,0,0,0.16)] p-4 w-150">
+    <div className="rounded-md shadow-[0_1px_4px_rgba(0,0,0,0.16)] p-4">
       <div
         className="cursor-pointer flex items-center justify-between gap-10"
         onClick={handleItemToggle}
