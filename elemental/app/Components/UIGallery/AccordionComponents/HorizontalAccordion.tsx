@@ -25,7 +25,7 @@ const HorizontalAccordion = () => {
 
   return (
     <section className="py-20 px-6">
-      <div className=" mx-auto max-w-[1000px]">
+      <div className="mx-auto max-w-[800px]">
         <h2 className="main-title ">What We Stand For</h2>
         <p className="subtitle mb-10">
           Behind every solution we build is a set of core principles that guide
@@ -45,7 +45,7 @@ const HorizontalAccordion = () => {
                 className={clsx(
                   "transition-all  duration-400 ease-in-out border sm:h-96 relative w-full overflow-hidden",
                   isActive
-                    ? "sm:flex-5 h-100 p-4 bg-purple-300"
+                    ? "sm:flex-4 h-100 p-4 bg-purple-300"
                     : "sm:flex-1 h-32 p-4 cursor-pointer",
                   index === values.length - 1
                     ? "border-b sm:border-r border-gray-500"
@@ -63,13 +63,13 @@ const HorizontalAccordion = () => {
                     </h3>
                   </div>
                 ) : (
-                  <div className="flex flex-col justify-center h-full text-left w-full text-black">
+                  <div className="flex flex-col justify-center h-full text-left w-full text-black  sm:w-70 lg:w-100">
                     <h3 className="text-4xl font-semibold mb-3 ">
                       0{index + 1}.
                       <br />
                       {value.title}
                     </h3>
-                    <p className="sm:max-h-[80%] md:w-100 text-black/60">
+                    <p className="sm:max-h-[80%] text-black/60">
                       {value.description}
                     </p>
                   </div>
